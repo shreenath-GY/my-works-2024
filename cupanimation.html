@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        section{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: aliceblue;
+        }
+        .cup{
+            width: 299px;
+            height: 200px;
+            background-color: chocolate;
+            margin: 100px;
+            margin-top: 300px;
+            border-radius: 0px 0px 100px 100px;
+            position: relative;
+            z-index: 1;
+            box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.772);
+        }
+        .cup::before{
+            content: "";
+            width: 97%;
+            height: 100px;
+            position: absolute;
+            background-color: white;
+            border-radius: 100%;
+            top: -50px;
+            border: 5px solid rgb(186, 96, 32);
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.345),inset 5px 10px 5px rgba(0, 0, 0, 0.735) ;
+
+        }
+        .cup::after{
+            content: "";
+            width: 23%;
+            height: 125px;
+            position: absolute;
+            /* background-color: aliceblue; */
+            background-color: transparent;
+            right: -90px;
+            border: 20px solid chocolate;
+            border-radius: 100px 100px 100px 100px ;
+            z-index: -1;
+        }
+        .plate{
+            position: absolute;
+            width: 400px;
+            height: 200px;
+            background-color: aqua;
+            border-radius: 100%;
+            top: 350px;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.208),inset 10px 03px 10px #492a2a,inset 3px 15px 5px #000;
+            transform: rotate(180deg);
+        }
+        @media(max-width:400px){
+          .cup{
+            margin: 0;
+            top: 300px;
+            /* right: 20px; */
+          }
+          .plate{
+            left: 10px;
+          }
+        }
+       
+
+        
+    </style>
+</head>
+<body>
+    <section>
+
+        <div class="cup">
+
+        </div>
+        <div class="plate"></div>
+    </section>
+</body>
+</html>
