@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            width: 100%;
+            min-height: 100vh;
+            background: radial-gradient(rgb(208, 207, 207), rgb(69, 110, 110));
+        }
+
+        section>center>h2 {
+            font-size: 30px;
+            color: rgb(10, 10, 10);
+            text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.498);
+            word-spacing: 10px;
+            letter-spacing: 2px;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+
+        .images-1 {
+            display: flex;
+            align-items: center;
+            margin: 50px 200px;
+            /* padding: 10px; */
+
+        }
+
+        .division-1,
+        .division-2,
+        .division-3,
+        .division-4 {
+            width: 250px;
+            height: 250px;
+            border: 3px solid white;
+            overflow: hidden;
+            margin-left: 5px;
+        }
+
+        .division-1>img,
+        .division-2>img,
+        .division-3>img,
+        .division-4>img {
+            width: 300px;
+            height: 300px;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+            transition: .8s;
+        }
+
+        .section2 {
+            width: 100%;
+            height: 20vh;
+            background-color: rgb(37, 73, 73);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:#000;
+        }
+        
+        @media (max-width:400px) {
+
+            .division-1>img,
+            .division-2>img,
+            .division-3>img,
+            .division-4>img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .division-1,
+            .division-2,
+            .division-3,
+            .division-4 {
+                width: 200px;
+                height: 200px;
+                margin-bottom: 10px;
+            }
+
+            .images-1 {
+                display: block;
+                align-items: center;
+                margin: 50px 70px;
+
+
+            }
+           
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <center>
+            <h2>My Albums</h2>
+        </center>
+        <div class="images-1">
+            <div class="division-1"><img
+                    src="https://img.freepik.com/free-photo/flat-lay-concept-clipboard_23-2148102722.jpg?w=996&t=st=1706023949~exp=1706024549~hmac=dfb7e9e0f5cc5ef8945248afa52854a174394ccb837993b9e06b39bdbfe1d4f7"
+                    alt=""></div>
+            <div class="division-2"><img
+                    src="https://img.freepik.com/free-photo/lovely-reading-composition-with-book_23-2148002620.jpg?w=740&t=st=1706025733~exp=1706026333~hmac=4cb4469be5f49ab7d30244117a1b23a194b33642d683d7f09e7f7d2dbaf03b08"
+                    alt=""></div>
+            <div class="division-3"><img
+                    src="https://img.freepik.com/free-photo/high-angle-desk-concept-with-copy-space_23-2148459688.jpg?size=626&ext=jpg&ga=GA1.1.1716224951.1705743065&semt=ais"
+                    alt=""></div>
+            <div class="division-4"><img
+                    src="https://img.freepik.com/free-photo/glasses-book_144627-324.jpg?size=626&ext=jpg&ga=GA1.1.1716224951.1705743065&semt=ais"
+                    alt=""></div>
+        </div>
+
+        <div class="images-1">
+            <div class="division-1"><img
+                    src="https://img.freepik.com/free-photo/book-library-with-open-textbook_1150-5921.jpg?t=st=1706026877~exp=1706027477~hmac=80318df9361cc5cc57eae11fa39b0c07341ec52886f6f6c543c71ad5eec9a6a3"
+                    alt=""></div>
+            <div class="division-2"><img
+                    src="https://img.freepik.com/free-photo/vertical-isolated-shot-marijuana-blunt-white_181624-25678.jpg?t=st=1706026950~exp=1706027550~hmac=b8b6487bcb35916f4e139382fa66ed8f146b9bd8063832fda28af4cd13047090"
+                    alt=""></div>
+            <div class="division-3"><img
+                    src="https://img.freepik.com/free-photo/low-angle-shot-tall-city-building-with-blue-sky-background-new-york_181624-20345.jpg?size=626&ext=jpg"
+                    alt=""></div>
+            <div class="division-4"><img
+                    src="https://img.freepik.com/free-photo/view-city-from-large-window-high-house_181624-18745.jpg"
+                    alt=""></div>
+        </div>
+    </section>
+   <!-- <div class="section2">
+    <center><h4>copyright 2024@prog-shree</h4></center>
+</div> -->
+</body>
+
+</html>
