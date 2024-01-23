@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            border-bottom: 2px solid black;
+            overflow: hidden;
+        }
+
+        header>nav>img {
+            width: 80px;
+            height: 80px;
+        }
+
+        header>nav>ul {
+            float: right;
+            list-style-type: none;
+        }
+
+        header>nav>ul>li {
+            position: relative;
+            display: inline-block;
+            padding: 40px 30px 0px 0px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* header>nav>ul>li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3%;
+            width: 0%;
+            background-color: greenyellow;
+        } */
+
+        /* header>nav>ul>li:hover::before {
+            width: 70%;
+            transition: .5s;
+        } */
+
+        header>nav>ul>li>a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        header>nav>ul>button {
+            text-align: center;
+            color: aliceblue;
+            position: relative;
+            padding: 10px 20px;
+            background-color: black;
+            border-radius: 100px;
+            font-size: 13px;
+            margin-right: 10px;
+            text-transform: capitalize;
+            word-spacing: 5px;
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        header>nav>ul>button::before {
+            content: "";
+            position: absolute;
+            width: 0%;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background-color: rgb(9, 239, 9);
+        }
+
+        header>nav>ul>button:hover::before {
+            width: 100%;
+            background-color: rgb(9, 242, 9);
+            transition: .7s;
+            background: transparent;
+        }
+
+        header>nav>ul>button:hover {
+            background-color: greenyellow;
+            color: #000;
+            font-size: 12px;
+            transition: .4s ease-in-out;
+        }
+
+        section {
+            width: 100%;
+            position: relative;
+        }
+
+        section>video {
+            width: 100%;
+            height: 90vh;
+            object-fit: cover;
+        }
+
+        section>.hero-sub1 {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(222, 229, 235, 0.979);
+            filter: blur(100px);
+        }
+        section>.hero-sub2 {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(222, 229, 235, 0.979);
+            filter: blur(100px);
+        }
+
+        section>.hero {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        section>.hero>center>h1 {
+            font-size: 4rem;
+            color: azure
+        }
+
+        section>.hero>center>h1::first-letter {
+            color: yellow;
+        }
+
+        section>.hero>center>p::first-letter {
+            color: yellow;
+        }
+
+        section>.hero>center>p {
+            font-size: 15px;
+            color: #fff;
+        }
+
+        @media (max-width:400px){
+            header>nav>ul{
+                float: none;
+            }
+            header>nav>ul>li{
+                display: block;
+                padding: 15px 0px 0px 0px;
+            }
+            header>nav>ul>button{
+                width: 70%;
+                margin: 20px 0px 20px 60px;
+            }
+            section>.hero>center>h1{
+                font-size: 40px;
+            }
+            section>.hero>center>p{
+                font-size: 13px;
+                margin-top: 20px;
+            }
+            section>.hero{
+                position:none;
+                top: 300px;
+                left: 10px;
+                transform: translateX(0%) translateY(0%);
+            }
+            section>video {
+                height: 80vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="https://img.freepik.com/free-vector/geometric-green-apple_23-2147517299.jpg?size=338&ext=jpg&ga=GA1.1.1716224951.1705743065&semt=ais"
+                alt="logo">
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">PRODUCTS</a></li>
+                <li><a href="">SERVICES</a></li>
+                <li><a href="">ABOUT US</a></li>
+                <li><a href="">CONTACT US</a></li>
+                <button>SIGN UP</button>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div class="hero">
+            <center>
+                <h1>Welcome to our Website</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elitjj kmkijb Lorem ipsum<br> dolor
+                    sit amet consectetur adipisicing elit. Laborum, alias?</p>
+            </center>
+        </div>
+        <div class="hero-sub1"></div>
+        <div class="hero-sub2"></div>
+        <video src="./pexels-khadijah-19155115 (1080p).mp4" muted autoplay loop></video>
+    </section>
+</body>
+
+</html>
