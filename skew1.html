@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        } 
+
+        .section1 {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 30px;
+            min-height: 100vh;
+            background-color: teal;
+            overflow: hidden;
+        }
+
+        .sub1 {
+            position: relative;
+            padding: 10px;
+            margin-bottom: 300px;
+            width: 300px;        
+        }
+        .sub2 {
+            position: relative;            
+            width: 300px;
+            margin-bottom: 300px;
+            margin-left: 100px;
+            padding: 10px;
+
+        }
+        .sub3 {
+            position: relative;
+            margin-bottom: 300px;
+            width: 300px;
+            padding: 10px;
+        }
+
+        .greendiv {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            box-shadow: 0px 2px 5px rgba(21, 20, 20, 0.304);
+        }
+        .pinkdiv {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            box-shadow: 0px 2px 5px rgba(21, 20, 20, 0.304);
+        }
+        .skydiv {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            box-shadow: 0px 2px 5px rgba(21, 20, 20, 0.304);
+        }
+        .sub3>.div1 {
+            background-color: rgb(9, 222, 233);
+            left: 0px;
+        }
+        .sub3>.div2 {
+            background-color: rgba(9, 222, 233, 0.762);
+            transform: scale(1.2);
+            transform-origin: top;
+            left: 20px;
+
+        }
+        .sub3>.div3{
+            background-color: rgba(9, 222, 233, 0.356);
+            transform: scale(1.4);
+            transform-origin: top;
+            left: 40px;
+
+        }
+        
+
+        
+
+
+        .sub2>.div1{
+            background-color: rgb(232, 11, 85);
+            transform: rotate(-42deg);
+            transform-origin: bottom;
+
+        }
+        .sub2>.div2{
+            background-color: rgba(211, 8, 76, 0.871);
+            top: -20px;
+            left:-17px;
+            transform: rotate(-60deg);
+            transform-origin: bottom;
+        }
+        .sub2>.div3{
+            background-color: rgba(198, 10, 73, 0.61);
+            top: -38px;
+            left:-38px;
+            transform: rotate(-80deg);
+            transform-origin: bottom;
+        }
+        .sub2>.div4{
+            background-color: rgba(218, 10, 79, 0.339);
+            transform: rotate(-90deg);
+            top: -40px;
+            left:-55px;
+            transform-origin: bottom;
+        }
+
+        .div1 {
+            background-color: rgba(8, 251, 8, 0.863);
+            z-index: 3;
+        }
+
+        .div2 {
+            background-color: rgba(14, 246, 14, 0.536);
+            transform: translateY(40px);
+            z-index: 2;
+        }
+
+        .div3 {
+            background-color: rgba(12, 209, 12, 0.758);
+            transform: translateY(80px);
+            z-index: 1;
+        }
+
+        .div4 {
+            background-color: rgba(7, 143, 7, 0.396);
+            transform: translateY(120px);
+            z-index: 1;
+        }
+        @media (max-width:400px){
+            .section1 {
+                flex-direction: column;
+            }
+            .sub2{
+                margin-left: 300px;
+            }
+            .sub1,.sub3{
+                margin-left: 80px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class="section1">
+        <div class="sub1">
+            <div class="greendiv div1"></div>
+            <div class="greendiv div2"></div>
+            <div class="greendiv div3"></div>
+            <div class="greendiv div4"></div>
+        </div>
+
+        <div class="sub2">
+            <div class="pinkdiv div1"></div>
+            <div class="pinkdiv div2"></div>
+            <div class="pinkdiv div3"></div>
+            <div class="pinkdiv div4"></div>
+        </div>
+
+        <div class="sub3">
+            <div class="skydiv div1"></div>
+            <div class="skydiv div2"></div>
+            <div class="skydiv div3"></div>
+        </div>
+    </section>
+</body>
+
+</html>
