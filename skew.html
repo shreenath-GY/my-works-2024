@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            background-color: aliceblue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .skew {
+            padding: 40px;
+            /* margin: 10px; */
+            background-color: rgb(4, 70, 70);
+            width: 70%;
+            height: 180px;
+            text-align: center;
+            overflow: hidden;
+
+        }
+
+        .skew1,
+        .skew3 {
+            transform: skew(30deg);
+        }
+        .skew3 {
+            box-shadow: inset 0px 10px 60px rgb(23, 23, 23);
+        }
+
+        .skew2 {
+            transform: skew(-30deg);
+            margin-left: 200px;
+            box-shadow: inset 0px 10px 40px rgb(22, 21, 21);
+        }
+
+        .skew>p,
+        span {
+            font-size: 20px;
+            color: aliceblue;
+        }
+
+        .skew>h1 {
+            color: rgb(255, 255, 255);
+            font-size: 50px;
+            font-weight: 400;
+        }
+
+        @media (max-width:400px) {
+
+            .skew>p,
+            span {
+                font-size: 8px;
+
+            }
+
+            .skew>h1 {
+                font-size: 17px;
+
+            }
+
+            .skew {
+                margin: 0px 20px;
+                padding: 10px;
+                width: 290px;
+                height: 60px;
+            }
+            .skew2 {
+                margin-left: 50px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="skew skew1">
+            <h1>What our clients say about us</h1>
+        </div>
+        <div class="skew skew2">
+            <p>"The one things that separate this training program from <br> All others is the follow-up and
+                accountability.."</p>
+            <span>Nancy Henger <br>vice president <br>USFI Marketing Communication </span>
+        </div>
+        <div class="skew skew3">
+            <p>"The one things that separate this training program from <br> All others is the follow-up and
+                accountability.."</p>
+            <span>Nancy Henger <br>vice president <br>USFI Marketing Communication </span>
+        </div>
+    </div>
+</body>
+
+</html>
