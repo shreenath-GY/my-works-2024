@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section {
+            margin: 30px;
+            padding: 30px;
+            /* background-color: black; */
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+
+        .cube,
+        .cube1 {
+            /* position: absolute; */
+            margin: 10px;
+            padding: 15px;
+            width: 215px;
+            height: 210px;
+            background-color: black;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            box-shadow: 50px 100px 200px black;
+
+        }
+
+        .cube {
+            transform: skewY(-24deg);
+            box-shadow: 50px 100px 200px black;
+
+        }
+
+        .cube1 {
+            position: absolute;
+            left: 280px;
+            top: 229px;
+            transform: skewY(29deg);
+
+        }
+
+        .cube2 {
+            position: absolute;
+            left: 385px;
+            top: 74px;
+            transform: rotate(-23deg) skew(39deg);
+            margin: 10px;
+            padding: 15px;
+            width: 241px;
+            height: 185px;
+            background-color: black;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+
+        .div1,
+        .div2,
+        .div3 {
+            width: 75px;
+            height: 70px;
+            background-color: greenyellow;
+            margin-top: 4px;
+            border-radius: 10px;
+            box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.857);
+            animation: colors 20s infinite linear;
+        }
+
+        .div111,
+        .div222,
+        .div333 {
+            width: 75px;
+            height: 70px;
+            background-color: greenyellow;
+            margin-top: 4px;
+            border-radius: 10px;
+            box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.857);
+            animation: colors1 20s infinite linear;
+        }
+
+        .div11,
+        .div22,
+        .div33 {
+            width: 83px;
+            height: 65px;
+            background-color: greenyellow;
+            margin-top: 4px;
+            border-radius: 10px;
+            box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.634);
+            animation: colors2 20s infinite linear;
+
+        }
+
+        @keyframes colors {
+            0% {
+                background-color: rgb(6, 249, 6);
+            }
+
+            25% {
+                background-color: blue;
+            }
+
+            50% {
+                background-color: orange;
+            }
+
+            25% {
+                background-color: purple;
+            }
+
+            100% {
+                background-color: red;
+            }
+        }
+
+        @keyframes colors1 {
+            0% {
+                background-color: orange;
+            }
+
+            25% {
+                background-color: blue;
+            }
+
+            50% {
+                background-color: rgb(6, 249, 6);
+            }
+
+            25% {
+                background-color: red;
+            }
+
+            100% {
+                background-color: purple;
+            }
+        }
+
+        @keyframes colors2 {
+            0% {
+                background-color: blue;
+            }
+
+            25% {
+                background-color: red;
+            }
+
+            50% {
+                background-color: purple;
+            }
+
+            25% {
+                background-color: rgb(6, 249, 6);
+            }
+
+            100% {
+                background-color: orange;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="section">
+        <div class="cube">
+            <div>
+                <div class="div1"></div>
+                <div class="div2"></div>
+                <div class="div3"></div>
+            </div>
+            <div>
+                <div class="div1"></div>
+                <div class="div2"></div>
+                <div class="div3"></div>
+            </div>
+            <div>
+                <div class="div1"></div>
+                <div class="div2"></div>
+                <div class="div3"></div>
+            </div>
+        </div>
+
+        <div class="cube1">
+            <div>
+                <div class="div111"></div>
+                <div class="div222"></div>
+                <div class="div333"></div>
+            </div>
+            <div>
+                <div class="div111"></div>
+                <div class="div222"></div>
+                <div class="div333"></div>
+            </div>
+            <div>
+                <div class="div111"></div>
+                <div class="div222"></div>
+                <div class="div333"></div>
+            </div>
+        </div>
+        <div class="cube2">
+            <div>
+                <div class="div11"></div>
+                <div class="div22"></div>
+                <div class="div33"></div>
+            </div>
+            <div>
+                <div class="div11"></div>
+                <div class="div22"></div>
+                <div class="div33"></div>
+            </div>
+            <div>
+                <div class="div11"></div>
+                <div class="div22"></div>
+                <div class="div33"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
