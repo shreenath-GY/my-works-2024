@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* box-sizing: border-box; */
+        }
+
+        .section {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .phone {
+            width: 300px;
+            height: 150px;
+            margin-right: 70px;
+            padding: 10px;
+            background: radial-gradient(red 5%, white 40%, rgb(180, 119, 55) 50%, green);
+            border-radius: 20px;
+            border-right: 10px solid darkcyan;
+            border-left: 10px solid darkcyan;
+            border-top: 5px solid darkcyan;
+            border-bottom: 5px solid darkcyan;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotate(-15deg);
+            z-index: -1;
+            box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.593);
+        }
+        .all-fingers {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        .finger1 {
+            width: 55px;
+            height: 130px;
+            background-color: rgb(180, 119, 55);
+            position: absolute;
+            left: 600px;
+            top: 240px;
+            border-radius: 100px;
+            transform: rotate(-10deg);
+            z-index: -1;
+            box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.296);
+
+        }
+
+        .finger2 {
+            width: 55px;
+            height: 120px;
+            background-color: rgb(180, 119, 55);
+            border-radius: 100px;
+            position: absolute;
+            top: 270px;
+            left: 650px;
+            transform: rotate(-10deg);
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.296);
+
+        }
+
+        .nails {
+            width: 40px;
+            height: 30px;
+            background-color: aliceblue;
+            border-radius: 5px 5px 100px 100px;
+            margin-top: 80px;
+            box-shadow:inset 0px 0px 10px black;
+
+
+        }
+        .nails1 {
+            width: 40px;
+            height: 30px;
+            background-color: aliceblue;
+            border-radius: 5px 5px 100px 100px;
+            margin-top: 100px;
+            box-shadow:inset 0px 0px 10px black;
+        }
+
+        .finger3 {
+            width: 55px;
+            height: 140px;
+            background-color: rgb(180, 119, 55);
+            border-radius: 100px;
+            position: absolute;
+            top: 260px;
+            left: 702px;
+            transform: rotate(-10deg);
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.296);
+
+        }
+
+        .finger4{
+            width: 55px;
+            height: 150px;
+            background-color: rgb(180, 119, 55);
+            border-radius: 100px;
+            position: absolute;
+            top: 170px;
+            left: 760px;
+            transform: rotate(10deg);
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: -1;
+            box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.296);
+
+        }
+        .finger5{
+            width: 55px;
+            height: 150px;
+            background-color: rgb(180, 119, 55);
+            border-radius: 100px;
+            position: absolute;
+            top: 370px;
+            left: 770px;
+            transform: rotate(110deg);
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.296);
+
+        }
+        .finger5:before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 70%;
+            border-radius: 100px;
+            background-color: rgb(180, 119, 55);
+            transform: rotate(-50deg);
+            transform-origin: top;
+            box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.369);
+        }
+        .hand-base{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(180, 119, 55);
+            position: absolute;
+            z-index: -2;
+            transform: rotate(13deg);
+            left: 600px;
+            top: 380px;
+        }
+        .hand-circle{
+            width: 200px;
+            height: 50px;
+            /* background-color: rgb(180, 119, 55); */
+            background: radial-gradient(rgba(0, 0, 0),rgb(180, 119, 55));
+            border-radius: 100%;
+            transform: rotate(13deg) translate(0px);
+            position: absolute;
+            left: 578px;
+            top: 549px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section">
+        <div class="all-fingers">
+            <div class="finger finger1"></div>
+            <div class="finger finger2">
+                <div class="nails"></div>
+            </div>
+            <div class="finger finger3"><div class="nails1"></div></div>
+            <div class="finger finger4"></div>
+            <div class="finger finger5"><div class="nails1"></div></div>
+
+        </div>
+        <div class="phone">
+        </div>
+        <div class="hand-base"></div>
+        <div class="hand-circle"></div>
+    </div>
+</body>
+
+</html>
