@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 100vh;
+
+        }
+
+        .camera-container {
+            width: auto;
+            min-height: 50vh;
+            background-color: aqua;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+           
+        }
+        .camera-click{
+            width: 30px;
+            height: 10px;
+            border-radius: 10px 10px 0px 0px;
+            background-color: red;
+            position: absolute;
+            top: 55px;
+            left: 80px;
+        }
+
+        .camera-body {
+            width: 350px;
+            height: 250px;
+            margin: 40px;
+            background-color: aliceblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 30px;
+            position: relative;
+           
+            /* overflow: hidden; */
+        }
+        .camera-body::before{
+            content: "";
+            position: absolute;
+            background-color: #27393a;
+            width: 20%;
+            height: 10%;
+            top:-25px;
+            border-radius: 10px 10px 0px 0px;
+        }
+        .camera-body::after{
+            content: "";
+            position: absolute;
+            background-color: #60b8bb;
+            width: 10%;
+            height: 7%;
+            top:-22px;
+            border-radius: 5px;
+        }
+        
+
+        .camera-lens {
+            width: 150px;
+            height: 150px;
+            /* margin: 30px; */
+            border-radius: 100px;
+            border: 6px solid #171918;
+            background-color: #102929;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 8px 10px 1px #a7a3a364;
+            z-index: 1;
+        }
+        .bars{
+            width: 30%;
+            height: 15%;
+            background: repeating-linear-gradient(red ,orange ,yellow ,green ,blue ,indigo ,violet );
+            position: absolute;
+            right: 0px;
+        }
+        .camera-flash{
+           width:10px;
+           height: 10px;
+           border-radius: 100px;
+           background-color: black;
+           position: absolute;
+           top: 40px;
+           left: 50px;
+
+        }
+
+        .camera-lens1 {
+            width: 100px;
+            height: 100px;
+            /* margin: 30px; */
+            border-radius: 100px;
+            border: 6px solid #5F8670;
+            background-color: #1B4242;
+            position: relative;
+        }
+
+        .camera-lens2 {
+            width: 45px;
+            height: 45px;
+            background-color: rgb(15, 14, 14);
+            border-radius: 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        .camera-point {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #5F8670;
+            position: absolute;
+            bottom: 10px;
+            right: 8px;
+        }
+        @media (max-width:800px) {
+            .camera-click{
+                top:78px
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="camera-container">
+            <div class="camera-click"></div>
+            <div class="camera-body">
+                <div class="camera-flash"></div>
+                <div class="camera-lens">
+                    <div class="camera-lens1">
+                        <div class="camera-lens2">
+                            <div class="camera-point"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bars">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
