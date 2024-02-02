@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container1{
+        background-color: whitesmoke;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        /* gap: 30px; */
+        min-height: 100vh;
+    }
+    .container1>.item {
+        /* background-color: rgb(237, 123, 142); */
+        /* padding: 50px; */
+        /* border-radius: 5px; */
+        outline: 5px solid black;
+        text-align: center;
+        color: #fff;
+        box-shadow: 0px 0px 10px;
+    }
+    .p1{
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        background-color: rgb(237, 123, 142);
+    
+    }
+    .p2{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 4;
+        grid-column-end: 6;
+        background-color: skyblue;
+    }
+    .p3{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 4;
+        grid-column-end: 6;
+        background-color: skyblue;
+    }
+    .p4{
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 6;
+        background-color: cyan;
+    }
+    .p5,.p6,.p7,.p8,.p9{
+        background-color: rgb(237, 123, 142);
+    }
+</style>
+</head>
+<body>
+    <section class="container1">
+        <div class="item p1">1</div>
+        <div class="item p2">2</div>
+        <div class="item p3">3</div>
+        <div class="item p4">4</div>
+        <div class="item p5">5</div>
+        <div class="item p6">6</div>
+        <div class="item p7">7</div>
+        <div class="item p8">8</div>
+        <div class="item p9">9</div>
+    </section>
+</body>
+</html>
