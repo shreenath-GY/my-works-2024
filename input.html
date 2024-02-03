@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>user inputs</title>
+        <style>
+            .{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            body{
+                background-color: brown;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .card{
+                background-color: #fff;
+                width: 300px;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow:15px 12px 15px #000,inset 2px 2px 10px #000 ;
+            }
+            input{
+                margin-bottom: 10px;
+                margin-top: 2px;
+                font-size: 16px;
+                padding: 10px;
+                width: 100%;
+                outline: none;
+                border-radius: 5px;
+                border: none;
+                border: 1px solid #c9c9c9;
+            }
+            input:active{
+                border: 2px solid rgb(147,61,0);
+            }
+            button{
+                border: none;
+                padding: 15px;
+                width: 100%;
+                background-color: chocolate;
+                border-radius: 5px;               
+            }
+            h1{
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <form autocomplete="off" class="card">
+      <label for="uname">Username</label><br>
+        <input type="text" placeholder="enter your name" name="" id="uname" required><br>
+        <label for="uemail">E-mail</label><br>
+        <input type="email" placeholder="enter your email" id="uemail" required><br>
+        <label for="pass">Password</label><br>
+        <input type="password" placeholder="enter Password" id="pass" required><br>
+        <label for="cpass">Confirm Password</label><br>
+        <input type="password" placeholder="Confirm Password" id="cpass" required><br>
+        <button type="submit">Submit</button>
+    </form>
+    </body>
+</html>
