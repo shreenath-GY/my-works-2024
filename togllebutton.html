@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToggleButton</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+        }
+        .section1{
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             /* margin: 20px; */
+             min-height: 100vh;
+             /* background-color: rgb(14, 14, 14); */
+
+        }
+        .sub-section{
+            background-color: aliceblue;
+            width: 100px;
+            height: 50px;
+            border-radius: 100px;
+            position: relative;
+        }
+        .roundbtn{
+            width: 45px;
+            height: 45px;
+            border-radius: 100px;
+            border: none;
+            outline: none;
+            position: absolute;
+            top: 2px;
+            left: 1px;
+            background-color: rgb(67, 65, 65);
+            transition: 0.3s;
+        }
+
+    </style>
+</head>
+<body id="bdy">
+    <div class="section1">
+        <div class="sub-section" id="sub">
+            <button id="btn" class="roundbtn" onclick="toggle()"></button>
+        </div>
+    </div>
+    <script>
+        function toggle(){
+             document.getElementById('btn').style.left = "54px"; 
+             document.getElementById('sub').style.backgroundColor = "black";
+             document.getElementById('bdy').style.backgroundColor ="white";
+
+        }
+    </script>
+</body>
+</html>
