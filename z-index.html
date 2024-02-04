@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .zindex section {
+            width: 500px;
+            height: 500px;
+            padding: 30px;
+            min-height: 300px;
+            max-height: 300px;
+            background-color: rgb(244, 5, 5);
+            position: absolute;
+        }
+        .zindex .first{
+            background-color: chartreuse;
+            top: 10px;
+            left: 10px;
+            z-index: 1;
+        }
+        .zindex .second{
+            background-color: rgba(255, 0, 0, 0.103);
+            top: 50px;
+            left: 50px;
+            z-index: 2;
+        }
+        .zindex .third{
+            background-color: blue;
+            top: 80px;
+            left: 80px;
+            z-index: 3;
+        }
+        .zindex .second:hover{
+            z-index: 5;
+            background-color: red;
+        }
+        .zindex .first:hover{
+            z-index: 4;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="zindex">
+        <section class="first">first</section>
+        <section class="second">Second</section>
+        <section class="third">Third</section>
+    </section>
+</body>
+
+</html>
