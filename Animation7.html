@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(45deg, #061de3, #e306ca);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(211, 211, 211);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .container {
+            width: 350px;
+            height: 500px;
+        }
+        .container:hover>.card{
+            cursor: pointer;
+            transform: rotateY(180deg);
+        }
+
+        .card {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            transition: transform 1500ms;
+            transform-style: preserve-3d;
+            border: 3px solid #ffff;
+            border-radius: 2.2rem;
+        }
+       
+
+        .front,
+        .back {
+            height: 100%;
+            width: 100%;
+            border-radius: 2rem;
+            box-shadow: 0 0 5px 2px rgba(50,50,50,0.25);
+            position: absolute;
+        }
+        
+
+
+        .front {
+            background-image: url(https://images.pexels.com/photos/3391830/pexels-photo-3391830.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+            background-size: cover;
+
+        }
+        .back{
+            background-color: black;
+            transform: rotateY(180deg);
+            backface-visibility: hidden;
+            padding: 10px;
+            text-align: center;
+        }
+        .back>p{
+            margin: 50px 0px 0px 0px;
+            color: #fff;
+        }
+        h1{
+            color:#fff;
+        }
+        .back>button{
+          padding: 18px 40px;
+          outline: none;
+          border: none;
+          cursor: pointer;
+          font-weight: 500;
+          letter-spacing: 1px;
+          margin-top: 100px;
+          transition: 1s all;
+
+        }
+        .back>button:hover{
+              /* font-size: 18px;
+              padding: 20px 45px; */
+              transform: scale(1.2);
+              background-color: rgb(212, 209, 209);
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="front"></div>
+            <div class="back">
+                <h1>Amazing deals</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus voluptates vitae odio velit? Aperiam esse dicta ratione omnis dolore quibusdam. Nisi vero praesentium enim explicabo facilis accusantium temporibus mollitia esse?</p>
+                <button>BUY NOW</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
