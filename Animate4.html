@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background: teal;
+            /* background: teal; */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .card {
+            width: 320px;
+            height: 500px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 8px solid #fff;
+            position: relative;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .card-body {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: -100%;
+            position: absolute;
+            background: #1f3d4738;
+            backdrop-filter: blur(5px);
+            border-radius: 15px;
+            color: #fff;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            transition: 1s;
+        }
+        .card:hover .card-body{
+            right:0;
+        }
+
+        .card-title {
+            text-transform: uppercase;
+            font-size: 50px;
+            font-weight: 500;
+        }
+
+        .card-sub-title {
+            text-transform: capitalize;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        .card-info {
+            font-size: 16px;
+            line-height: 25px;
+            margin: 40px 0;
+            font-weight: 400;
+        }
+
+        .card-btn {
+            color: #1f3d47;
+            background: black;
+            width: 120px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            font-weight: 500;
+            text-transform: capitalize;
+            cursor: pointer;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <img src="https://images.pexels.com/photos/3751007/pexels-photo-3751007.jpeg" class="card-img" alt="">
+        <div class="card-body">
+            <h1 class="card-title">BP</h1>
+            <p class="card-sub-title">Be-Practical Banglore</p>
+            <p class="card-info">One of the top most trainer and placement guarantee institute in Banglore. Form zero to hero plz welcome here. We are always provide the best skills for future reference
+                Join for java,python and mern fullstack to learn all things for the web development. </p>
+            <button class="card-btn">Register</button>
+        </div>
+    </div>
+    
+</body>
+
+</html>
