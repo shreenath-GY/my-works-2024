@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #ball {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      position: absolute;
+    }
+  </style>
+  <title>Simple Animation</title>
+</head>
+<body>
+
+<div id="ball"></div>
+
+<script>
+  // Get the ball element
+  var ball = document.getElementById('ball');
+
+  // Set initial position and speed
+  var positionX = 0;
+  var positionY = 0;
+  var speedX = 5;
+  var speedY = 5;
+
+  // Function to update the ball's position
+  function updatePosition() {
+    positionX += speedX;
+    positionY += speedY;
+
+    // Check boundaries and reverse direction if needed
+    if (positionX + ball.clientWidth > window.innerWidth || positionX < 0) {
+      speedX = -speedX;
+    }
+
+    if (positionY + ball.clientHeight > window.innerHeight || positionY < 0) {
+      speedY = -speedY;
+    }
+
+    // Update ball position
+    ball.style.left = positionX + 'px';
+    ball.style.top = positionY + 'px';
+
+    // Request the next animation frame
+    requestAnimationFrame(updatePosition);
+  }
+
+  // Start the animation
+  updatePosition();
+</script>
+
+</body>
+</html>
