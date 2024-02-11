@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: black;
+        }
+
+        .container {
+            width: 300px;
+            height: 50px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .container>span {
+            /* color: white; */
+            font-size: 5em;
+            animation: animate 2s infinite linear;
+            transition: 0.2s;
+            animation-delay: calc(var(--i) * 0.2s);
+        }
+
+        @keyframes animate {
+            0%,50% {
+                opacity: 0;
+                color: white;
+                /* text-shadow: 0 0 10px gold,
+                    0 0 20px gold,
+                    0 0 30px gold,
+                    0 0 50px gold; */
+            }
+
+            100%{
+                opacity: 1;
+                text-shadow: 0 0 10px gold,
+                    0 0 20px gold,
+                    0 0 30px gold,
+                    0 0 50px gold;
+                    transform: translateX(50px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <span class="letter1" style="--i:1;">H</span>
+        <span class="letter1" style="--i:2;">E</span>
+        <span class="letter1" style="--i:3;">L</span>
+        <span class="letter1" style="--i:4;">L</span>
+        <span class="letter1" style="--i:5;">0</span>
+    </div>
+</body>
+
+</html>
