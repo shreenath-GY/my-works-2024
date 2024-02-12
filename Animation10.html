@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            width: 500px;
+            height: 300px;
+            background-color: azure;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 0 1px black,
+                        inset 0 0 10px black,
+                        inset 0 0 20px black,
+                        inset 0 0 25px black;
+        }
+        .switch1{
+            height: 120px;
+            width: 60px;
+            box-shadow: 0 0 1px rgba(86, 86, 86, 0.431),
+            inset 5px 5px 2px rgb(81, 78, 78),
+            inset 0px 0px 30px rgb(81, 78, 78);
+            border-radius: 5px;
+        }
+        .container>.light{
+           background-color: rgb(255, 13, 0);
+           box-shadow: inset 5px 5px 2px rgb(81, 78, 78),
+            inset 0px 0px 30px rgb(81, 78, 78);
+            animation: lights 1s infinite linear;
+            transition: 2s all;
+        }
+        @keyframes lights {
+            0%,50%,100%{
+                background-color: rgb(255, 13, 0);
+                box-shadow: 0 0 10px red, inset 10 5px 20px red;
+
+            }
+            75%,25%{
+                background-color: rgb(255, 13, 0);
+                box-shadow: 0 0 10px red,inset 5px 5px 20px red;
+
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="switch1 case1"></div>
+        <div class="switch1 case2"></div>
+        <div class="switch1 case3"></div>
+        <div class="switch1 light"></div>
+    </div>
+</body>
+</html>
