@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(27, 91, 27);
+      /* background-image: url(https://images.pexels.com/photos/413195/pexels-photo-413195.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
+      background-size: cover;
+    }
+
+    .ball {
+      width: 100px;
+      height: 100px;
+      background-color: rgb(48, 204, 48);
+      border-radius: 50%;
+      position: relative;
+      animation: bounce 2s infinite alternate;
+      border: 1px solid white;
+      overflow: hidden;
+      box-shadow:inset 0 0 10px #545050,
+                       0 0 10px black;
+    }
+    .ball::before{
+        content: "";
+        position: absolute;
+        top: -70px;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(48, 204, 48);
+        border: 3px solid white;
+        border-radius: 50%;
+    }
+    .ball::after{
+        content: "";
+        position: absolute;
+        bottom: -70px;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(48, 204, 48);
+        border: 3px solid white;
+        border-radius: 50%;
+    }
+
+
+    @keyframes bounce {
+      0%{
+        transform: translateY(0);
+        transform: rotate(0deg);
+      }
+      100%{
+        transform: translateY(-150px) rotate(300deg) skew(10deg);
+      }
+    }
+    .shadow{
+        width: 100px;
+        height: 100px;
+        background: #201f1f;
+        box-shadow: 0 0 10px black;
+        border-radius: 50%;
+        transform: skew(70deg);
+        animation: shadow 2s infinite alternate;
+        margin-left: 10px;
+    }
+    @keyframes shadow {
+        0%{
+            transform: skew(20deg);
+            box-shadow: 0 0 4px black;
+        }
+        100%{
+            transform: skew(70deg) translateX(50px);
+            transform-origin: right;
+            box-shadow: 0 0 20px rgb(26, 23, 23);
+
+
+        }
+        
+        
+    }
+  </style>
+  <title>Ball Bouncing Animation</title>
+</head>
+<body>
+  <div class="ball"></div>
+  <div class="shadow"></div>
+</body>
+</html>
