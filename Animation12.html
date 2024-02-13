@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+       body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+       }
+       .border{
+        width: 200px;
+        height: 80px;
+        /* background: rgb(179, 12, 101); */
+        border: 2px solid rgb(179, 12, 101);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        /* position: relative; */
+       }
+       button{
+        position: fixed;
+        width: 100px;
+        height: 100px;
+        background-color: chartreuse;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        transform: scale(1.1);
+       }
+       button:hover .border{
+        transform: scale(1.2);
+        background-color: aqua;
+       }
+       
+    </style>
+</head>
+<body>
+    <div class="border">
+        <button>HOVER ME</button>
+    </div>
+</body>
+</html>
