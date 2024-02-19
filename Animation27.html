@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            width: 250px;
+            background-color: rgb(180, 176, 176);
+            padding: 10px;
+            border-radius: 5px;
+
+        }
+
+        .card input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .card button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            background-color: #f7152c;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            padding: 30px;
+            background-color: #a8a3a4;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>calculation</h2>
+            <input type="text" name="" id="firstnumber" placeholder="Enter first number" required>
+            <input type="text" name="" id="secondnumber" placeholder="Enter second number" required>
+            <input type="text" name="" id="thirdnumber" placeholder="Enter third number" required>
+            <button type="button" onclick="hello()">calculate</button>
+            <span><b>Result:</b></span>
+            <p id="result"></p>
+        </div>
+    </div>
+    <script>
+        function hello() {
+            var firstnumber = document.getElementById("firstnumber").value;
+            var secondnumber = document.getElementById("secondnumber").value;
+            var thirdnumber = document.getElementById("thirdnumber").value;
+
+
+            var result = document.getElementById('result');
+
+            if (firstnumber == "" || secondnumber == "" || thirdnumber == "") {
+                result.innerText = "please enter the empty fields";
+                result.style.color = "red";
+
+            }
+            else if (firstnumber > secondnumber && firstnumber > thirdnumber) {
+                result.innerText = `first is greater than the second number and third number`;
+                result.style.color = "green";
+            }
+            else if (secondnumber > firstnumber && secondnumber > thirdnumber) {
+                result.innerText = `second is greater than the first number and third number`;
+                result.style.color = "green";
+            }
+            else if (thirdnumber > firstnumber && thirdnumber > secondnumber) {
+                result.innerText = `third is greater than the first number and second number`;
+                result.style.color = "green";
+            }
+            else {
+                result.innerText = "you done great job"
+                result.style.color = "green";
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
