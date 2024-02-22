@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            width: 100%;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(45deg,orange,rgb(235, 9, 235));
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .container{
+            width: 300px;
+            height: 450px;
+            background-color: #ffff;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgb(123, 120, 120);
+            position: relative;
+            z-index: 3;
+            overflow: hidden;
+            padding: 10px;
+        }
+       
+        .container::before{
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            top: -10%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            background-color: orange;
+            z-index: -1;
+        }
+        .container2::before{
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            top: -10%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            background-color: rgb(255, 0, 72);
+            z-index: -1;
+        }
+        .container3::before{
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            top: -10%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            background-color: purple;
+            z-index: -1;
+        }
+        .container>h1,p,button{
+            margin-top: 50px;
+        }
+        .container>h1{
+            color: #ffff;
+            font-size: 60px
+        }
+        .container>button{
+            padding: 13px 25px;
+            background-color: orange;
+            border-radius: 100px;
+            border: none;
+            cursor: pointer;
+            color: #ffff;
+        }
+        .container>p{
+            font-size: 15px;
+            font-weight: 400;
+            padding: 10px;
+            word-spacing: 1px;
+
+        }
+        .container>button:hover{
+            background-color: rgb(253, 182, 49);
+        }
+        .container2>button{
+            background-color: rgb(255, 0, 72);
+        }
+        .container3>button{
+            background-color: purple;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container container1">
+        <h1>1</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, reprehenderit.consectetur ipsum dolor sit amet, consectetur adipisicing elit.adipisicing elit. adipisicing elitjss hio edukei</p>
+        <button>Read More</button>
+    </div>
+
+    <div class="container container2">
+        <h1>2</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, reprehenderit.consectetur ipsum dolor sit amet, consectetur adipisicing elit.adipisicing elit. adipisicing elitjss hio edukei</p>
+        <button>Read More</button>
+    </div>
+
+    <div class="container container3">
+        <h1>3</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, reprehenderit.consectetur ipsum dolor sit amet, consectetur adipisicing elit.adipisicing elit. adipisicing elitjss hio edukei</p>
+        <button>Read More</button>
+    </div>
+</body>
+</html>
