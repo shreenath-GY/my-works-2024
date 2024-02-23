@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right,orange,red);
+            /* flex-wrap: nowrap; */
+        }
+        .container{
+            width: 700px;
+            background-color: #ffff;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            padding: 30px;
+        }
+        .container-header{
+           position: relative;
+           width: 70%;
+           height: 75%;
+           background: linear-gradient(45deg,red,orange);
+           left: -100px;
+           border-radius: 15px;
+           box-shadow: 10px 5px 10px rgba(255, 0, 0, 0.183);
+        }
+        .container-items{
+           padding: 10px;
+        }
+        .container>.container-items>small{
+           font-size: 14px;
+           font-weight: 500;
+           color: #222222; 
+        }
+        .container>.container-items>h2{
+           font-size: 22px; 
+           margin-top: 10px;
+        }
+        .container>.container-items>p{
+           /* font-size: 22px;  */
+           margin-top: 18px;
+           font-weight: 400;
+        }
+        .container>.container-items>button{
+            background: linear-gradient(45deg,red,orange);
+            padding: 15px 25px;
+            color: #fff;
+            margin-top: 25px;
+            border-radius: 100px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+          <div class="container-header"></div>
+          <div class="container-items">
+            <small>26 December 2019</small>
+            <h2>Lorem Ipsum Dolor2.</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi corrupti tempore esse aspernatur, quasi quaerat.</p>
+            <button>READ MORE</button>
+          </div>
+    </div>
+</body>
+</html>
