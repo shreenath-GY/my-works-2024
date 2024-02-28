@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            padding: 30px 70px;
+            background-color: rgb(44, 39, 35);
+            border-radius: 10px;
+            width: 400px;
+        }
+
+        .card input {
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            width: 100%;
+        }
+
+        .card button {
+            width: 100%;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: chartreuse;
+            outline: none;
+            border: none;
+        }
+
+        .card button:hover {
+            background-color: rgb(118, 207, 28);
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: .3s;
+            /* font-size: 1.1rem; */
+        }
+
+        .card label {
+            margin-left: 10px;
+            color: whitesmoke;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            color: rgb(246, 231, 17);
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        span {
+            /* margin-left: 10px; */
+            color: rgb(236, 6, 6);
+            background-color: rgb(241, 231, 231);
+            border-radius: 5px;
+            font-size: 10px;
+            width: 100%;
+        }
+
+        @media (max-width: 458px) {
+            .card {
+                padding: 30px 50px;
+                width: 300px;
+            }
+
+            .card input {
+                margin: 5px;
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h2>Login form</h2>
+        <span id="result"></span><br>
+        <label for="name">Name</label><br>
+        <input type="text" name="name" id="uname" placeholder="Enter your name"><br>
+        <span id="result1"></span><br>
+        <label for="Dofb">Phone-number</label><br>
+        <input type="text" name="Dofb" id="udob" placeholder="Enter your Phone Number"><br>
+        <span id="result2"></span><br>
+        <label for="pass">Password</label><br>
+        <input type="password" name="pass" id="pass" placeholder="Enter your password"><br>
+        <span id="result3"></span><br>
+        <label for="cpass">Confirm-Password</label><br>
+        <input type="password" name="cpass" id="cpass" placeholder="Confirm your password"><br>
+        <span id="result4"></span><br>
+        <button type="button" onclick="validation()">Login</button>
+    </div>
+</body>
+
+<script>
+    function validation() {
+        let name = document.getElementById("uname").value;
+        let phone = document.getElementById("udob").value;
+        let phone1 = console.log(Number(phone));
+        let pass = document.getElementById("pass").value;
+        let cpass = document.getElementById("cpass").value;
+        let result = document.getElementById("result");
+        let result1 = document.getElementById("result1");
+        let result2 = document.getElementById("result2");
+        let result3 = document.getElementById("result3");
+        let result4 = document.getElementById("result4");
+
+        let uname = document.getElementById("uname");
+        let udob = document.getElementById("udob");
+        let upass = document.getElementById("pass");
+        let ucpass = document.getElementById("cpass");
+
+
+
+        if (name == "" || phone == "" || pass == "" || cpass == "" || result1 == "") {
+            result.innerText = "All fields are required";
+            result.style.padding = "5px 10px";
+            result.style.margin = "10px";
+            // uname.style.border="1px solid red"
+            // udob.style.border="1px solid red";
+            // upass.style.border="1px solid red";
+            // ucpass.style.border="1px solid red";
+        }
+        else if (pass.length < 6) {
+            result3.innerText = "password must be greater than 5 letters";
+            result3.style.padding = "5px 10px";
+            result3.style.margin = "10px";
+        }
+        else if (pass != cpass) {
+            result4.innerText = "password and c-password are not matched";
+            result4.style.padding = "5px 10px";
+            result4.style.margin = "10px";
+        }
+
+        else {
+            alert('login successfully');
+
+        }
+        if (phone1 > 10 || phone1 < 10) {
+            result2.innerText = "Enter valid Phone Number";
+            result2.style.padding = "5px 10px";
+            result2.style.margin = "10px";
+        }
+    }
+</script>
+
+</html>
