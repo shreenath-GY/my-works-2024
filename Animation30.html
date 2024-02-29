@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="text">
+    <button onclick="paragraph()">Create Paragraph</button>
+    <div class="" id="result"></div>
+
+    <script>
+        function paragraph() {
+            var text = document.getElementById("text");// if we take the value we dont apply the style so we have to take tag only
+            var result = document.getElementById("result");
+
+            var text1 = parseInt(text);
+            if(text.value==""){
+               text.style.border="1px solid red" ;
+            }
+            // console.log(text1);
+
+            for (var i = 0; i < text.value; i++) {
+                let paragraph1 = document.createElement("p");
+                paragraph1.innerText = "You successfully hack the NASA"
+                paragraph1.style = "color:green"
+                result.appendChild(paragraph1)
+            }
+        }
+    </script>
+</body>
+
+</html>
