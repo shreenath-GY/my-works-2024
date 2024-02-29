@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        button{
+            background-color: yellow;
+            outline: none;
+            border: none;
+            padding: 10px 30px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        .bulbs{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* margin-left: 100px; */
+
+        }
+        .bulb{
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .bulb img{
+            object-fit: cover;
+            height: 300px;
+            transition: .5s;
+
+        }
+         img:hover{
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="bulb">
+      <img src="https://img.freepik.com/free-photo/abstract-surface-textures-white-concrete-stone-wall_74190-8189.jpg?t=st=1709179594~exp=1709183194~hmac=a71764bbf4f4cf47ca3262ee358c28fdd190f1662cb0f49b0448e28dcb4b47c0&w=996" alt="Add some IMages" width="300px" id="image">
+    </div>
+      <div class="bulbs">
+      <button onclick="loadImage()">Bulb on</button>
+      <button onclick="loadImage1()">Bulb off</button>
+    </div>
+
+      <script>
+        var img=document.getElementById('image');
+        function loadImage(){
+         var img1=img.setAttribute('src',"https://img.freepik.com/free-vector/gradient-light-bulb-with-electricity_23-2149130379.jpg?t=st=1709179212~exp=1709182812~hmac=3e38525bc5ff2065d5001238886ad75327f28302150f23b5dc00c120bd6c868b&w=740");
+        }
+        function loadImage1(){
+         var img1=img.setAttribute('src',"https://img.freepik.com/free-photo/electricity-technology-equipment-development-energy_1172-246.jpg?t=st=1709179173~exp=1709182773~hmac=dfdab2a8631e317a29027b8b352fb57a9fda7f67b7472df16c23c061ca1cee35&w=360");
+        }
+
+      </script>
+</body>
+</html>
