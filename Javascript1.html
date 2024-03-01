@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            flex-direction: column;
+            background-color: #161515;
+        }
+
+        select {
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 10px;
+            background-color: darkcyan;
+        }
+
+        p {
+            letter-spacing: 1px;
+            word-spacing: 5px;
+            color: #fff;
+            /* background-color: #a7a0a0; */
+            padding: 10px;
+        }
+
+        .section {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 50px;
+            padding: 10px;
+            /* background-color: brown; */
+
+        }
+        img{
+            border: 3px solid whitesmoke;
+            border-radius: 2px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border-radius: 10px;
+            width: 200px;
+            background-color: yellow;
+            /* border: none; */
+            outline: none;
+        }
+
+        option {
+            background-color: turquoise;
+            color: rgb(15, 15, 15);
+            font-size: 1rem;
+        }
+        h2{
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Get details of the famous Cricketers</h2>
+    <select name="" id="article">
+        <option value="" selected disabled>--select below options--</option>
+        <option value="Ashika">Virat Kohli</option>
+        <option value="Srinidhi">Mahendra Singh Dhoni</option>
+        <option value="Rukmini">Sachin Tendulkar</option>
+    </select>
+    <button type="button" onclick="addArticle()">Add Article</button>
+    <div class="section" id="result">
+
+    </div>
+
+    <script>
+        function addArticle() {
+            var options = document.getElementById('article').value;
+            var result = document.getElementById('result');
+            result.innerHTML = "";
+
+            switch (options) {
+                case "Ashika":
+                    result.innerHTML += `     <img src="https://www.mykhel.com/img/2017/10/viratkohli-30-1509354003.jpg" alt="" width="300">`
+                    result.innerHTML += `<p>In 2013, Kohli was ranked number one in the ICC rankings for ODI batsmen. In 2015, he achieved the summit of T20I rankings.[6] In 2018, he was ranked top Test batsman, making him the only Indian cricketer to hold the number one spot in all three formats of the game. He is the first player to score 20,000 runs in a decade. In 2020, the International Cricket Council named him the male cricketer of the decade.[7]
+                        In 2018, he became the first player to win both ICC ODI and Test Player of the Year awards in the same year. Also, he was named the Wisden Leading Cricketer in the World for three consecutive years, from 2016 to 2018. At the national level, Kohli was honoured with the Arjuna Award in 2013, the Padma Shri in 2017 and India's highest sporting honour, the Khel Ratna award, in 2018.
+
+He has received many accolades for his performances in cricket. He won the ICC ODI Player of the Year award four times in 2012, 2017, 2018, and 2023. He also won the Sir Garfield Sobers Trophy, given to the ICC Cricketer of the Year, on two occasions, in 2017 and 2018 respectively. In 2018, he became the first player to win both ICC ODI and Test Player of the Year awards in the same year. Also, he was named the Wisden Leading Cricketer in the World for three consecutive years, from 2016 to 2018. At the national level, Kohli was honoured with the Arjuna Award in 2013, the Padma Shri in 2017 and India's highest sporting honour, the Khel Ratna award, in 2018.
+
+In 2018, Time magazine included him on its list of the 100 most influential people in the world. Kohli has been deemed one of the most commercially viable athletes, with estimated earnings of ₹634 crore (US$79 million) in the year 2022</p>`
+                    break;
+
+                case "Srinidhi":
+                    result.innerHTML += `     <img src="https://i2.wp.com/godofindia.com/wp-content/uploads/2017/05/ms-dhoni-19.jpg" alt="" width="300">`
+                    result.innerHTML += `<p>Mahendra Singh Dhoni (/məˈheɪndrə ˈsɪŋ dhæˈnɪ/ ⓘ; born 7 July 1981) is an Indian professional cricketer. He is a right handed batter and a wicket-keeper. Widely regarded as one of the most prolific wicket-keeper-batsmen and captains, he represented the Indian cricket team and was the captain of the side in limited-overs formats from 2007 to 2017 and in test cricket from 2008 to 2014. Dhoni has captained the most international matches and is the most successful Indian captain. He has led India to victory in the 2011 Cricket World Cup, the 2007 ICC World Twenty20 and the 2013 ICC Champions Trophy, the only captain to win three different limited overs tournaments. He also led the teams that won the Asia Cup in 2010, 2016 and was a member of the title winning squad in 2018.
+
+Born in Ranchi, Dhoni made his first class debut for Bihar in 1999. He made his debut for the Indian cricket team on 23 December 2004 in an ODI against Bangladesh and played his first test a year later against Sri Lanka. In 2007, he became the captain of the ODI side before taking over in all formats by 2008. Dhoni retired from test cricket in 2014, but continued playing in limited overs cricket till 2019. He has scored 17,266 runs in international cricket including 10,000 plus runs at an average of more than 50 in ODIs.
+
+Dhoni plays for Chennai Super Kings in the IPL, leading them to the final on ten occasions and winning it five times (2010, 2011, 2018, 2021 and 2023). He has also led CSK to two Champions League T20 titles in 2010 and 2014. He is amongst the few batsmen to have scored more than five thousand runs in the IPL, as well as being the first wicket-keeper to do so.
+
+In 2008, Dhoni was awarded India's highest sport honor Major Dhyan Chand Khel Ratna Award by Government of India. He received the fourth highest civilian award Padma Shri in 2009 and third highest civilian award Padma Bhushan in 2018. Dhoni holds an honorary rank of Lieutenant Colonel in the Parachute Regiment of the Indian Territorial Army which was presented to him by the Indian Army in 2011. He is one of the most popular cricketers in the world.</p>`
+                    break;
+
+                case "Rukmini":
+                    result.innerHTML += `     <img src="https://www.indiantelevision.com/sites/default/files/styles/smartcrop_800x800/public/images/tv-images/2019/05/30/sachin.jpg?itok=HQ6hzHL8" alt="" width="300">`
+                    result.innerHTML += `<p>Tendulkar took up cricket at the age of eleven, made his Test match debut on 15 November 1989 against Pakistan in Karachi at the age of sixteen, and went on to represent Mumbai domestically and India internationally for over 24 years.[9] In 2002, halfway through his career, Wisden ranked him the second-greatest Test batsman of all time, behind Don Bradman, and the second-greatest ODI batsman of all time, behind Viv Richards.[10] The same year, Tendulkar was a part of the team that was one of the joint-winners of the 2002 ICC Champions Trophy. Later in his career, Tendulkar was part of the Indian team that won the 2011 Cricket World Cup, his first win in six World Cup appearances for India.[11] He had previously been named "Player of the Tournament" at the 2003 World Cup.
+
+Tendulkar has received several awards from the government of India: the Arjuna Award (1994), the Khel Ratna Award (1997), the Padma Shri (1998), and the Padma Vibhushan (2008).[12][13] After Tendulkar played his last match in November 2013, the Prime Minister's Office announced the decision to award him the Bharat Ratna, India's highest civilian award.[14][15] He was the first sportsperson to receive the reward and, as of 2023, is the youngest recipient.[16][17][18] In 2010, Time included Tendulkar in its annual list of the most influential people in the world.[19] Tendulkar was awarded the Sir Garfield Sobers Trophy for cricketer of the year at the 2010 International Cricket Council (ICC) Awards.[20]</p>`
+                    break;
+
+                default:
+                    result.innerHTML += `<h1>Select the above options</h1>`
+
+            }
+        }
+    </script>
+</body>
+
+</html>
