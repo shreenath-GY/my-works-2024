@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .container>textarea{
+          width: 100%;
+          background-color: black;
+          color: #fff;
+          padding: 20px;
+          margin: 30px;
+          border-radius: 10px;
+        }
+        button{
+            padding: 20px 55px;
+            background-color: lightseagreen;
+            outline: none;
+            border: none;
+            color: #fff;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <textarea name="" id="textbox" cols="30" rows="10" contenteditable="true">Hello world</textarea>
+        <button type="button" id="speakbtn" onclick="speaker()">Speak</button>
+        <!-- <h1 contenteditable="true">
+            hi shreee
+        </h1> -->
+    </div>
+
+    <script>
+        function speaker() {
+            let synth = window.speechSynthesis;
+            let voice = new SpeechSynthesisUtterance(`${textbox.value}`);
+            let sounds = synth.getVoices();
+            voice.voice = sounds[1];
+            // voice.pitch=1.5;
+            voice.rate = 1;
+            // voice.volume=2;
+            synth.speak(voice);
+        }
+    </script>
+</body>
+
+</html>
