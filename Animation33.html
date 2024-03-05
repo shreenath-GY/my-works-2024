@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        h1 {
+            background: linear-gradient(to right, rgb(246, 4, 44), rgb(6, 253, 59));
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        button {
+            padding: 10px 30px;
+            background-color: yellow;
+            border: none;
+            outline: none;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Giving styles to any elements from script </h1>
+    </center>
+    <button onclick="setColorToBody()">Change body Color</button>
+
+    <button onclick="darkThemeHandler('#fff','#000')">Light theme</button>
+    <button onclick="darkThemeHandler('#000','#fff')">Dark theme</button>
+
+
+    <script>
+        function setColorToBody() {
+            document.body.style.background = "linear-gradient(45deg,purple ,pink)"
+            document.body.style.backgroundRepeat = "no-repeat"
+            document.body.style.height = "100vh"
+
+        }
+
+        function darkThemeHandler(background, color) {
+            document.body.style.background = background;
+            document.body.style.color = color;
+
+        }
+    </script>
+</body>
+
+</html>
