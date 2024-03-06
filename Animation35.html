@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #image {
+            mix-blend-mode: multiply;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        h1 {
+            background: linear-gradient(to right, rgb(246, 4, 44), rgb(6, 253, 59));
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        button {
+            padding: 10px 30px;
+            background-color: yellow;
+            border: none;
+            outline: none;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>document.hasFocus()</h1>
+    </center>
+    <hr>
+
+    <p id="log">Awating focus check..</p>
+    <img src="" alt="" id="image">
+    <button onclick="openHandler()">Click me</button>
+
+
+    <script>
+        function openHandler() {
+            window.open('https://github.com', "github", 'width=800, height=400, left=100, right = 100')
+        }
+        let date = Date()
+        function checkPageFocus() {
+            let body = document.querySelector('body')
+            let logs = document.querySelector('#log')
+            let image = document.querySelector('#image')
+
+            if (document.hasFocus()) {
+                logs.textContent = "student is in exam hall"
+                body.style.backgroundColor = "#ccc"
+                image.src = ""
+            }
+            else {
+                logs.textContent = "student is not in hall " + date
+                console.log(date, "offline");
+                body.style.backgroundColor = "red"
+                image.src = "https://img.freepik.com/premium-vector/fixed-404-problem-isometric-illustration_18660-420.jpg?w=740"
+
+
+            }
+        }
+        setInterval(' checkPageFocus()', 1000)
+    </script>
+</body>
+
+</html>
