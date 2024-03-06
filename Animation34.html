@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            flex-direction: column;
+            gap: 30px;
+        }
+        h1{
+            background: linear-gradient(to right, rgb(246, 4, 44), rgb(6, 253, 59));
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        button{
+            padding: 10px 30px;
+            background-color: yellow;
+            border: none;
+            outline: none;
+            border-radius: 2px;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Window.close() and Window.open()</h1>
+    </center>
+    <button type="button" onclick="openHandler()">open page</button>
+    <button type="button" onclick="closeHandler()">close page</button>
+
+    <script>
+        var websites;
+        function openHandler(){
+           websites=open('https://www.youtube.com');
+           console.log('website states',websites) //在新窗
+        }
+        function closeHandler(){
+           websites.close();
+           console.log('website states',websites) //在新窗
+        }
+    </script>
+</body>
+</html>
