@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #ccc;
+            gap: 50px;
+        }
+
+        .card1 {
+            width: 270px;
+            height: 420px;
+            /* background-color: aqua; */
+            /* border-radius: 10px; */
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            flex-direction: column;
+            background-color: #fff;
+
+        }
+
+        .card1>div>img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: .7s;
+            filter: blur(1px);
+            /* filter: grayscale(20); */
+            filter: grayscale(10);
+        }
+
+        .card1>div>img:hover {
+            transform: scale(1.1);
+            filter: blur(0px);
+
+        }
+
+        .img {
+            width: 100%;
+            height: 260px;
+            overflow: hidden;
+        }
+
+        .card1>h1 {
+            position: absolute;
+            top: 200px;
+            left: 20px;
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .card1>p {
+            position: absolute;
+            top: 220px;
+            left: 20px;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .respects {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 5px;
+            width: 80%;
+        }
+
+        .respects>.followers,
+        .following {
+            background-color: #fff;
+            padding: 5px;
+            flex: 1;
+            font-size: 15px;
+            border-right: 2px solid black;
+            text-align: center;
+        }
+
+        .respects>.posts {
+            background-color: #fff;
+            padding: 5px;
+            flex: 1;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 12px;
+            font-weight: 400;
+            color: #716e6e;
+
+        }
+
+        .card1>button {
+            /* margin: 5px; */
+            width: 90%;
+            margin-top: 8px;
+            padding: 10px;
+            outline: none;
+            border: none;
+            color: #fff;
+            font-size: 15px;
+        }
+
+        .card1>button:hover {
+            cursor: pointer;
+            filter: contrast(10);
+        }
+
+        @media (max-width:768px) {
+            .container {
+                flex-direction: column;
+                padding: 50px;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card1" id="card1">
+            <div class="img">
+                <img src="https://img.freepik.com/free-photo/indoor-studio-shot-attractive-beautiful-pretty-young-woman-wearing-eyeglasses-yellow-sweatshirt-having-long-fair-hair-posing-isolated-pink-wall-people-emotions-concept_176532-6755.jpg?w=740&t=st=1709968781~exp=1709969381~hmac=2ef08b50da5d1943f44b04942a86deb411257e31e82caca67f389787c186c6ec"
+                    alt="image">
+            </div>
+            <h1>Merry Johnson</h1>
+            <p>Freelancer</p>
+
+            <div class="respects">
+                <div class="followers">
+                    <h1>2450</h1>
+                    <p>Followers</p>
+                </div>
+                <div class="following">
+                    <h1>350</h1>
+                    <p>Following</p>
+                </div>
+                <div class="posts">
+                    <h1>360</h1>
+                    <p>Posts</p>
+                </div>
+            </div>
+            <button style="background-color: rgba(12, 229, 12, 0.598);">Follow</button>
+            <button style="background-color: rgba(230, 58, 58, 0.752);" onclick="removeCard1()">Remove</button>
+        </div>
+        <div class="card1" id="card2">
+            <div class="img">
+                <img src="https://img.freepik.com/free-photo/indoor-studio-shot-attractive-beautiful-pretty-young-woman-wearing-eyeglasses-yellow-sweatshirt-having-long-fair-hair-posing-isolated-pink-wall-people-emotions-concept_176532-6755.jpg?w=740&t=st=1709968781~exp=1709969381~hmac=2ef08b50da5d1943f44b04942a86deb411257e31e82caca67f389787c186c6ec"
+                    alt="image">
+            </div>
+            <h1>Merry Johnson</h1>
+            <p>Freelancer</p>
+
+            <div class="respects">
+                <div class="followers">
+                    <h1>2450</h1>
+                    <p>Followers</p>
+                </div>
+                <div class="following">
+                    <h1>350</h1>
+                    <p>Following</p>
+                </div>
+                <div class="posts">
+                    <h1>360</h1>
+                    <p>Posts</p>
+                </div>
+            </div>
+            <button style="background-color: rgba(12, 229, 12, 0.598);">Follow</button>
+            <button style="background-color: rgba(230, 58, 58, 0.752);" onclick="removeCard2()">Remove</button>
+        </div>
+        <div class="card1" id="card3">
+            <div class="img">
+                <img src="https://img.freepik.com/free-photo/indoor-studio-shot-attractive-beautiful-pretty-young-woman-wearing-eyeglasses-yellow-sweatshirt-having-long-fair-hair-posing-isolated-pink-wall-people-emotions-concept_176532-6755.jpg?w=740&t=st=1709968781~exp=1709969381~hmac=2ef08b50da5d1943f44b04942a86deb411257e31e82caca67f389787c186c6ec"
+                    alt="image">
+            </div>
+            <h1>Merry Johnson</h1>
+            <p>Freelancer</p>
+
+            <div class="respects">
+                <div class="followers">
+                    <h1>2450</h1>
+                    <p>Followers</p>
+                </div>
+                <div class="following">
+                    <h1>350</h1>
+                    <p>Following</p>
+                </div>
+                <div class="posts">
+                    <h1>360</h1>
+                    <p>Posts</p>
+                </div>
+            </div>
+            <button style="background-color: rgba(12, 229, 12, 0.598);">Follow</button>
+            <button style="background-color: rgba(230, 58, 58, 0.752);" onclick="removeCard3()">Remove</button>
+        </div>
+
+    </div>
+
+    <script>
+        let card1 = document.getElementById('card1');
+        function removeCard1() {
+            card1.style.display = "none";
+        }
+        let card2 = document.getElementById('card2');
+        function removeCard2() {
+            card2.style.display = "none";
+        }
+        let card3 = document.getElementById('card3');
+        function removeCard3() {
+            card3.style.display = "none";
+        }
+        // removeCard();
+    </script>
+</body>
+
+</html>
