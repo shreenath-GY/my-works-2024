@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: rgb(189, 185, 185);
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 2px;
+            border: none;
+            outline: none;
+        }
+
+        .buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 80px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            /* padding: 10px 20px; */
+            width: 70px;
+            height: 40px;
+            margin: 8px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: teal;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" name="" id="number1" placeholder="Enter first number">
+        <input type="text" name="" id="number2" placeholder="Enter second number">
+        <div class="buttons">
+            <button type="button" onclick="addition1()">ADD</button>
+            <button type="button" onclick="subtraction1()">SUB</button>
+        </div>
+        <div class="buttons">
+            <button type="button" onclick="division1()">DIV</button>
+            <button type="button" onclick="multiplication1()">MUL</button>
+        </div>
+    </div>
+    <script>
+
+        var firstnumber = document.getElementById('number1');
+        var secondnumber = document.getElementById('number2');
+
+        function addition1() {
+            var add = Number(firstnumber.value) + Number(secondnumber.value);
+            alert("Additon of two number is: " + add);
+        }
+        function division1() {
+            var add = Number(firstnumber.value) / Number(secondnumber.value);
+            alert("division of two number is: " + add);
+        }
+        function multiplication1() {
+            var add = Number(firstnumber.value) * Number(secondnumber.value);
+            alert("Multiplication of two number is: " + add);
+        }
+        function subtraction1() {
+            var add = Number(firstnumber.value) - Number(secondnumber.value);
+            alert("division of two number is: " + add);
+        }
+
+    </script>
+</body>
+
+</html>
