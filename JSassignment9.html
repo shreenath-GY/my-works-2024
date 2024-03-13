@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            /* background-color: rgb(55, 142, 64); */
+        }
+
+        .header {
+            width: 100%;
+            height: 60px;
+            background-color: rgb(51, 138, 98);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+        }
+
+        .header>.profileimg {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .online {
+            display: flex;
+            /* align-items: center; */
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .header>.profileimg>img {
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            object-fit: cover;
+        }
+
+        .header>.profileimg>i {
+            color: #fff;
+            font-size: 20px;
+            margin-left: 5px;
+        }
+
+        .header>.profileimg>.online>h2 {
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .header>.tools {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .header>.tools>i {
+            font-size: 20px;
+            padding: 10px;
+            color: #fff;
+        }
+
+        .body {
+            width: 100%;
+            min-height: 100vh;
+            margin-top: 60px;
+            background-color: #d3d1d1;
+        }
+
+        .footer {
+            width: 100%;
+            height: 10vh;
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .text-tools {
+            /* flex: 1; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            background-color: #fff;
+            padding: 7px;
+            width: 100%;
+            border-radius: 50px;
+        }
+
+        .text-tools>:nth-child(1) {
+            font-size: 20px;
+            color: #5f5f5f;
+            margin-left: 10px;
+        }
+
+        .text-tools>:nth-child(2) {
+            font-size: 15px;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            padding: 5px;
+            width: 100%;
+        }
+
+        .text-tools>:nth-child(3) {
+            font-size: 20px;
+            background-color: #5f5f5f;
+            color: white;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            border-radius: 50%;
+        }
+
+        .text-tools>:nth-child(4) {
+            font-size: 20px;
+            color: #5f5f5f;
+            margin-right: 10px
+        }
+
+        .fa-microphone {
+            background-color: rgb(51, 138, 98);
+            color: #fff;
+            padding: 14px;
+            margin: 5px;
+            border-radius: 50%;
+        }
+
+        .me {
+            display: flex;
+            align-items: end;
+            flex-direction: column;
+            margin-top: 10px;
+            padding: 10px;
+            font-weight: 300;
+        }
+
+        .me h1 {
+            width: fit-content;
+            background: rgb(219, 231, 142);
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 100px 10px 100px 100px;
+            color: #fff;
+            font-weight: 400;
+        }
+
+        .you h1 {
+            width: fit-content;
+            background-color: #fff;
+            box-shadow: 0px 5px 10px #ccc;
+            border-radius: 10px 100px 100px 100px;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="profileimg">
+                <i class="fa-solid fa-angle-left"></i>
+
+                <img src="https://img.freepik.com/free-photo/indoor-studio-shot-attractive-beautiful-pretty-young-woman-wearing-eyeglasses-yellow-sweatshirt-having-long-fair-hair-posing-isolated-pink-wall-people-emotions-concept_176532-6755.jpg?t=st=1709831122~exp=1709834722~hmac=22ea4216e9915b7755d7d910988b76615a642efd3ab7f2483446f1b0f97013ff&w=826"
+                    alt="image">
+
+                <div class="online">
+                    <h2>User Name</h2>
+                    <span id="status"></span>
+                </div>
+
+            </div>
+            <div class="tools">
+                <i class="fa-solid fa-video"></i>
+                <i class="fa-solid fa-phone"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+        </div>
+
+        <div class="body" id="msgbody">
+
+        </div>
+
+        <div class="footer">
+            <div class="text-tools">
+                <i class="fa-solid fa-smile"></i>
+                <input type="text" name="" id="" placeholder="Message">
+                <span>&#8377;</span>
+                <i class="fa-solid fa-camera"></i>
+            </div>
+            <i class="fa-solid fa-microphone"></i>
+        </div>
+    </div>
+
+
+    <script>
+        let status = document.getElementById('status');
+
+        function statuschecker() {
+            if (navigator.onLine) {
+                status.innerText = "Online";
+                status.style.color = "#fff"
+                status.style.fontSize = "13px"
+            }
+            else {
+                status.innerText = "Offline";
+                status.style.color = "#fff"
+                status.style.fontSize = "13px"
+
+            }
+        }
+        setInterval('statuschecker()', 1000);
+
+        let msgbody = document.getElementById('msgbody');
+
+
+        const message = [
+            {
+                text: "hello",
+                time: "4:30pm",
+                sendBy: "me",
+                isRead: true,
+            },
+            {
+                text: "hi, who are ",
+                time: "5:00pm",
+                sendBy: "you",
+                isRead: true,
+            },
+            {
+                text: "i am shreenath",
+                time: "5:06pm",
+                sendBy: "you",
+                isRead: true,
+            },
+            {
+                text: "how are you dude",
+                time: "5:08pm",
+                sendBy: "me",
+                isRead: true,
+            },
+            {
+                text: "i am fine..how about you?",
+                time: "5:09pm",
+                sendBy: "you",
+                isRead: true,
+            },
+            {
+                text: "I am also fine",
+                time: "5:10pm",
+                sendBy: "me",
+                isRead: true,
+            }
+        ]
+        message.map((item, index) => {
+            msgbody.innerHTML += `<div class="${item.sendBy == "me" ? "me" : "you"}">
+  <h1>${item.text}</h1>
+  <small>${item.time}</small>
+  </div>`
+        })
+    </script>
+</body>
+
+</html>
