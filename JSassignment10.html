@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+       
+        .post{
+           box-shadow: 0px 0px 10px #ccc;
+           padding: 10px;
+           margin-bottom: 15px;
+
+        }
+        .result{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+        }
+        .profile{
+ display: flex;
+ margin-bottom: 15px;
+ gap: 10px;
+        }
+        .profile img{
+            border-radius: 100%;
+            width:50px;
+            height: 50px;
+
+        }
+        .dots{
+        display: flex;
+      
+       margin: auto;
+        }
+        .fa-ellipsis-vertical{
+         font-size: 20px;
+         margin-top: 10px;
+
+        }
+        .dots button{
+            border: none;
+           font-size: 1.2rem;
+            outline: none;
+            background-color: rgb(246, 246, 246);
+            border-radius: 10px;
+            padding: 10px;
+        }
+        
+        .profilename{
+          font-size: 15px;
+        }
+       
+        img{
+            width: 400px;
+        }
+        .fa-heart {
+            font-size: 20px;
+        }
+        .fa-comment{
+            font-size: 20px;
+            margin-left: 10px;
+            
+        }
+        /* .footer{
+            display: flex;
+            
+        } */
+        
+        .fa-bookmark, .fa-download{
+            font-size: 20px;
+            display: flex;
+            float: right;
+            
+        }  
+        .fa-bookmark{
+            margin-left: 10px;
+        }
+        .fa-share{
+            font-size: 20px;
+            margin-left: 10px;
+            
+        }
+        h1{
+            font-size: 30px;
+           font-weight: 800;
+            margin-bottom: 10px;
+           text-decoration:solid;
+            letter-spacing: 1px;
+        }
+        /* @media(max-width:768px){
+           .post{
+            display: flex;
+            flex-direction: column;
+           }
+        } */
+    </style>
+
+</head>
+<body>
+    <center>
+        <h1>Instagram</h1>
+        
+
+
+
+    </center>
+    <div class="result" id="result">
+ 
+    </div>
+   
+</body>
+<script>
+    let  result = document.querySelector("#result");
+ let instagram = [
+    {
+    Image:"https://i.pinimg.com/736x/91/77/97/91779771e0c323b769b5468319754d3a.jpg",
+    profilename:"coder-jetsetjoy",
+    description:"Sonu Nigam -Yenagali Original music",
+    button:"Follow",
+    dots:"",
+    postlargeImage:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWzK-qLavlwtIevHvyL4Tt43tV0Uc4QvPFzA&usqp=CAU",
+    icon:"",
+},
+{
+    Image:"https://wallpapers.com/images/high/instagram-profile-pictures-dmkskud5fmjd8rda.webp",
+    profilename:"Wanderlust Travel",
+    description:"Sonu Nigam. Shreya Ghoshal <br>Sadha Ninna Kannali",
+    button:"Follow",
+    dots:"",
+    postlargeImage:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ryFBpIE-J7G3pkCj4V6EZXQXvEmsYDKFGA&usqp=CAU",
+    icon:"",
+},
+{
+    Image:"https://wallpapers.com/images/hd/instagram-profile-pictures-ut4t3clnp7r84i2x.jpg",
+    profilename:"KingOfCool",
+    description:"Sonu Nigam-USire Usire lofi Song",
+    button:"Follow",
+    dots:"",
+    postlargeImage:"https://cdn4.sharechat.com/BestPhotoProfile_255cf04_1602867049097_sc_cmprsd_40.jpg?tenant=sc&referrer=pwa-sharechat-service&f=rsd_40.jpg",
+    icon:"",
+},
+{
+    Image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5QsF7LrQ7Q1IOVswTgjw0VpLkbsFti3GUqA&usqp=CAU",
+    profilename:"Food Family",
+    description:"Neeti Mohan, Shekar Ravjiani, Salim <br>Original audio",
+    button:"Follow",
+    dots:"",
+    postlargeImage:"https://images.hindustantimes.com/img/2021/10/18/1600x900/dan-gold-4_jhDO54BYg-unsplash_1634522531063_1634522542077.jpg",
+    icon:"",
+},
+{
+    Image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf8ZZb4kbd6jujodHBUAC5rz8PDe3sHCMshA&usqp=CAU",
+    profilename:"mi-created",
+    description:"Anirudh Ravichander -Original audio ",
+    button:"Follow",
+    dots:"",
+    postlargeImage:"https://thumbs.dreamstime.com/b/idea-earth-creation-mixed-media-human-hand-pointing-finger-as-symbol-elements-image-furnished-nasa-88503819.jpg",
+    icon:"",
+},
+{
+    Image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHQkMirlT7Hj876yJyiPwh8gvldtk-SBBO44Y90j2Nuw&s",
+    profilename:"Snow Miser.",
+    description:"Kannada_status_lover-Original Song",
+    button:"Follow",
+    dots:"",
+    postlargeImage:"https://storeassets.im-cdn.com/products/84163/instagram-banner-ads-design-for-traveling-plp-file-for-pixellab-197155_image_1604546553_0x0_webp.jpg",
+    icon:"",
+},
+{
+    Image:"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/LinkedIn_icon_circle.svg/2048px-LinkedIn_icon_circle.svg.png",
+    profilename:"Linkedln",
+    description:"Shreya Ghosghal-Gamanava..",
+    button:"Follow",
+    dots:"",
+    postlargeImage:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_mR5YEVFm7br3y_uvsNOyTm5b-X9WUKZQdg&usqp=CAU",
+    icon:"",
+},
+{
+    Image:"https://images.shiksha.com/mediadata/shikshaOnline/mailers/2022/naukri-learning/what-is/What-is-sales.jpg",
+    profilename:"coder-jetsetjoy",
+    description:"Punith Rajkumar-Original Song",
+    button:"Follow",
+    dots:"",
+    postlargeImage:"https://thumbs.dreamstime.com/b/revenue-increase-sales-financial-growth-business-concept-virtual-screen-153370037.jpg",
+    icon:"",
+},
+
+]
+ 
+
+ 
+ 
+ instagram.map((items, index)=>{
+  result.innerHTML +=
+  `
+  <section class = "post">
+  <div class="profile">
+        
+    <img src= "${items.Image}"></img>
+
+<div class = "profilename">
+  <h3>${items.profilename}</h3>
+  <small>${items.description}</small>
+  </div>
+  <div class = "dots">
+  
+  <i>${items.dots}
+    <button>${items.button}</button>
+    <i class="fa-solid fa-ellipsis-vertical"></i></i>
+</div>
+  </div>
+  <img src = "${items.postlargeImage}"></img>
+  <i>${items.icon}
+    <div class="footer">
+  <i class="fa-regular fa-heart"><br>
+    </i>
+        <i class="fa fa-comment"></i>
+        <i class="fa-solid fa-share"></i>
+        
+        <i class="fa-regular fa-bookmark"></i>
+        <i class="fa fa-download"></i>
+        
+        </i><br>
+        <small>1,800 likes</small><br>
+        <small>Febraury 23</small>
+        </div>
+        </section>
+  `
+ })
+</script>
+</html>
