@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .card {
+            width: 350px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            margin: 5px;
+        }
+        .img{
+            flex: 1;
+        }
+
+        .img>img {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+        }
+        .followers{
+            display: flex;
+            /* align-items: center; */
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+            flex-wrap: nowrap;
+            flex: 3;
+        }
+        .followers>h2{
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .followers>p{
+            font-size: 10px;
+            /* font-weight: 600; */
+        }
+        .btn{
+            flex: 1;
+        }
+        .btn>button{
+            background-color: rgb(37, 37, 252);
+            color: #fff;
+            padding: 10px 14px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            font-size: 12px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div id="result" class="container">
+
+
+    </div>
+    <script>
+        let post = [
+            {
+                postImage: "https://img.freepik.com/free-photo/expressive-senior-woman-posing_344912-499.jpg?size=626&ext=jpg",
+                followerName: "Benzin",
+                followedBy: "Followed by rakshaleone_official",
+            },
+            {
+                postImage: "https://img.freepik.com/free-photo/young-adult-enjoying-virtual-date_23-2149328221.jpg?t=st=1710643527~exp=1710647127~hmac=9066dfb4738adef134017a2333b56a41494f9fc36270d9517bf6cf50ba69e91d&w=360",
+                followerName: "Benzin",
+                followedBy: "Followed by virat_official",
+            },
+            {
+                postImage: "https://img.freepik.com/free-photo/close-up-portrait-young-bearded-man-white-shirt-jacket-posing-camera-with-broad-smile-isolated-gray_171337-629.jpg?t=st=1710643547~exp=1710647147~hmac=fd3f8b90f2cb46f3f11a9fef449e903d89d35a67519c9409704da2ce5610f48a&w=740",
+                followerName: "Benzin",
+                followedBy: "Followed by sevag_official",
+            },
+            {
+                postImage: "https://img.freepik.com/free-photo/pleasant-looking-caucasian-female-with-long-hair-wearing-yellow-casual-shirt-having-good-mood-looking-happily-camera_176532-11558.jpg?t=st=1710643263~exp=1710646863~hmac=bb0b4db03d6442ee89d3ac478d59b1cefee077a8a256aeac66e59ae2b0f1e97a&w=740",
+                followerName: "Benzin",
+                followedBy: "Followed by elvish_official",
+            },
+            {
+                postImage: "https://img.freepik.com/free-photo/portrait-happy-smiley-older-woman_23-2149022611.jpg?size=626&ext=jpg&ga=GA1.1.1716224951.1705743065",
+                followerName: "Benzin",
+                followedBy: "Followed by dhoni_official",
+            },
+            {
+
+                postImage: "https://img.freepik.com/free-photo/portrait-happy-smiling-man_23-2149022654.jpg?t=st=1710646399~exp=1710649999~hmac=339daa1534ea1a991717cfe56e44f77da8e5a218a3d66eb8fd04bb83fc7913f6&w=740",
+                followerName: "Benzin",
+                followedBy: "Followed by smr_official",
+            },
+            {
+                postImage: "https://img.freepik.com/free-photo/cheerful-indian-businessman-smiling-closeup-portrait-jobs-career-campaign_53876-129416.jpg?t=st=1710646381~exp=1710649981~hmac=8ccddf8da72e3aa3c8d6438bca56e396b07b4280c202f61f71d5d123a99a5b77&w=740",
+                followerName: "Benzin",
+                followedBy: "Followed by Ashika_official",
+            },
+            {
+                postImage: " https://img.freepik.com/free-photo/portrait-nervous-young-man-with-beard-raising-up-brow_176420-12180.jpg?t=st=1710646448~exp=1710647048~hmac=28fa27c90e27c8b5020c45123cd8d32db548f43f2c58e6d9c17291fbd8346f42",
+                followerName: "Benzin",
+                followedBy: "Followed by Ashika_official",
+            },
+            {
+                postImage: "https://img.freepik.com/free-photo/joyful-beautiful-caucasian-woman-with-bun-hairstyle-wearing-t-shirt-expressing-cheer-good-mood_176420-17182.jpg",
+                followerName: "",
+                followedBy: "Followed by Ashika_official",
+            }
+        ]
+       
+        let result = document.querySelector("#result");
+        post.map((item, index) => {
+            result.innerHTML += `<div class="card">
+            <div class="img">
+                <img src="${item.postImage}" alt="">
+            </div>
+            <div class="followers">
+                <h2>${item.followerName}</h2>
+                <p>${item.followedBy}</p>
+            </div>
+            <div class="btn">
+                <button>Follow</button>
+            </div>
+        </div>`;
+        })
+    </script>
+</body>
+
+</html>
