@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        h1 {
+            background: linear-gradient(to right, rgb(246, 214, 4), rgb(6, 216, 253));
+            -webkit-background-clip: text;
+            color: transparent;
+            font-size: 30px;
+        }
+        p{
+            font-size: 3rem;
+            /* color: rgb(24, 201, 5); */
+        }
+    </style>
+</head>
+<body>
+    <h1>checking status online/offline </h1>
+    <p id="status">Status Checking...</p>
+    <script>
+        function updateStatus(){
+            const statusElement = document.getElementById("status");
+            if(navigator.onLine){
+                statusElement.textContent="user is: online";
+                statusElement.style.color="rgb(24, 201, 5)"
+            }
+            else{
+                statusElement.textContent="user is: offline";
+                statusElement.style.color="red"
+            }
+        }
+            // window.addEventListener('online', function (event){
+            //     updateStatus(); 
+            // });
+            // window.addEventListener('offline', function (event){
+            //     updateStatus(); 
+            // });
+            setInterval('updateStatus()',1000);
+    </script>
+</body>
+</html>
