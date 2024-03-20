@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Your CSS styles here */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" name="" id="number1" placeholder="Enter first number">
+        <input type="text" name="" id="number2" placeholder="Enter second number">
+        <div class="buttons">
+            <button type="button" onclick="addition1()">ADD</button>
+            <button type="button">SUB</button>
+        </div>
+        <div class="buttons">
+            <button type="button">DIV</button>
+            <button type="button">MUL</button>
+        </div>
+    </div>
+    <script>
+        function addition1() {
+            let firstnumber = document.getElementById('number1').value;
+            let result = Number(firstnumber) + Number(document.getElementById('number2').value);
+            alert("Addition of two numbers is: " + result);
+        }
+    </script>
+</body>
+
+</html>
