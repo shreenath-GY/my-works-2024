@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            /* background-color: aquamarine; */
+        }
+
+
+
+        .tem {
+            background-color: #4c6759;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .tem input {
+            width: fit-content;
+            background-color: #4c6759;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+
+        input::placeholder {
+            color: #fff;
+        }
+
+        select {
+            outline: none;
+            border: none;
+            background-color: #4c6759;
+            color: #fff;
+        }
+        p{
+            padding:  5px;
+            color: #fff;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: teal;
+            padding: 10px 25px;
+            margin-top: 15px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Vowels or consonants Checker</h1>
+    </center>
+    <div class="container">
+        <div class="tem">
+            <input type="text" name="" id="char" placeholder="enter a character">
+        </div>
+        <p id="result"></p>
+        <button onclick="checker()">Check</button>
+    </div>
+
+    <script>
+        let character = document.getElementById('char');
+        let result=document.getElementById('result');
+        function checker() {
+            let a=character.value
+            console.log(a)
+            if ((a=='a' || a=='e' || a=='i' || a=='o' || a=='u') || (a=='A' || a=='E' || a=='I' || a=='O' || a=='U')){
+              result.innerHTML="Entered character is a vowel";
+              result.style.backgroundColor="green"
+            }
+            else if(a==""){
+                result.innerHTML="please enter some values";
+                result.style.backgroundColor="red";
+            }
+            else{
+                result.innerHTML="Entered character is a consonant";
+                result.style.backgroundColor="blue";
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>
