@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            /* background-color: aquamarine; */
+        }
+
+        input {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: lemonchiffon;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+        }
+
+        p {
+            color: #fff;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            color: greenyellow;
+            border: none;
+            outline: none;
+            margin-top: 5px;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: darkcyan;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="number" placeholder="Enter year to check leap year or not" id="year"><br>
+        <button onclick="leapYear()">Check</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        let result = document.getElementById('result');
+        let year = document.getElementById('year');
+        function leapYear() {
+            let a = year.value;
+            console.log(a);
+            if (a % 4 == 0 && a % 100 != 0 || a % 400 == 0) {
+                result.innerHTML = "Entered Year is a leap year";
+                result.style.padding="5px";
+                result.style.backgroundColor="green";
+
+            }
+            else {
+                result.innerHTML = "Entered Year is not a leap year";
+                result.style.padding="5px";
+                result.style.backgroundColor="rgb(225, 88, 88)";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
