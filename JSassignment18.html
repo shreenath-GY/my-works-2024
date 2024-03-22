@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .left {
+            flex: 5;
+            background-color: black;
+        }
+
+        .left textarea {
+            background: transparent;
+            width: 100%;
+            height: 100%;
+            color: green;
+            font-weight: 400;
+            font-size: 15px;
+        }
+
+        .right {
+            flex: 3;
+            background-color: rgb(37, 37, 37);
+            height: 700px;
+            overflow: auto;
+
+        }
+
+        .right .btns h4 {
+            color: #fff;
+        }
+
+        #result {
+            color: red;
+        }
+
+        button {
+            padding: 10px;
+
+        }
+        .btns{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Write some content inside the input then select copy paste and cut to the output</h1>
+    </center>
+    <div class="container">
+        <div class="left">
+            <textarea name="" id="" cols="30" rows="10" onselect="selectHandler()" oncut="cutHandler()"
+                oncopy="copyHandler()" onpaste="pasteHandler()"></textarea>
+        </div>
+        <div class="right">
+            <div class="btns">
+                <h4>Output</h4>
+                <button onclick="clearHandler()">Clear</button>
+            </div>
+            <br>
+            <hr>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script>
+        let result = document.getElementById("result");
+        function selectHandler() {
+            result.innerHTML += "user is select the content<br>"
+        }
+        function cutHandler() {
+            result.innerHTML += "user is cut the content<br>"
+        }
+        function copyHandler() {
+            result.innerHTML += "user is copy the content<br>"
+        }
+        function pasteHandler() {
+            result.innerHTML += "user is paste the content<br>"
+        }
+
+        function clearHandler() {
+            result.innerHTML = '';
+        }
+
+    </script>
+</body>
+
+</html>
