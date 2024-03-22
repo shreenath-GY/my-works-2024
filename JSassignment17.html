@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .left {
+            flex: 5;
+            background-color: black;
+        }
+
+        .left video{
+            background: transparent;
+            width: 90%;
+            height: 90%;
+            color: green;
+            font-weight: 400;
+            font-size: 15px;
+        }
+
+        .right {
+            flex: 3;
+            background-color: rgb(37, 37, 37);
+            height: 700px;
+            overflow: auto;
+
+        }
+
+        .right .btns h4 {
+            color: #fff;
+        }
+
+        #result {
+            color: red;
+        }
+
+        button {
+            padding: 10px;
+
+        }
+
+        .btns {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Write some content inside the input then select copy paste and cut to the output</h1>
+    </center>
+    <div class="container">
+        <div class="left">
+            <video
+                src="https://videocdn.cdnpk.net/joy/content/video/free/video0485/large_preview/_import_61a85f890d9319.59002664.mp4?filename=1118423_liquid_splash_pattern_3840x2160.mp4"
+                autoplay controls loop onplay="playVideoHandler()" onpause="pauseVideoHandler()" onvolumechange="volumeChangeHandler()" onseeking="videoTimingHandler()"></video>
+
+        </div>
+        <div class="right">
+            <div class="btns">
+                <h4>Output</h4>
+                <button onclick="clearHandler()">Clear</button>
+            </div>
+            <br>
+            <hr>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script>
+        let result = document.getElementById("result");
+        function playVideoHandler() {
+            result.innerHTML += 'started playing video <br>'
+        }
+        function pauseVideoHandler() {
+            result.innerHTML += 'pause the playing video <br>'
+        }
+        function volumeChangeHandler() {
+            result.innerHTML += 'volume is changing in the playing video <br>'
+        }
+        function videoTimingHandler() {
+            result.innerHTML += 'video timing is changing in the playing video <br>'
+        }
+        function clearHandler(){
+            result.innerHTML="";
+        }
+
+    </script>
+</body>
+
+</html>
