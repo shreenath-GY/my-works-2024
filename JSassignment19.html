@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h3>IF ELSE LADDER</h3>
+    </center>
+    <div id="result">
+
+    </div>
+    <script>
+        let firstNumber=prompt("enter the first number");
+        let secondNumber=prompt("enter the second number");
+
+        let total= Number(firstNumber)+Number(secondNumber);
+        let result=document.getElementById('result');
+
+        console.log(total+"typeof:"+typeof(total))
+        if( Number(firstNumber) === Number(secondNumber)){
+           result.innerHTML+=`<h1>first number ${firstNumber}is equal to ${secondNumber}second number</h1>`
+        }
+        else if( Number(firstNumber) > Number(secondNumber)){
+            result.innerHTML+=`<h1>first number ${firstNumber}is greater than to ${secondNumber}second number</h1>`
+        }
+        else if( Number(firstNumber) < Number(secondNumber)){
+            result.innerHTML+=`<h1>first number ${firstNumber}is smaller than to ${secondNumber}second number</h1>`
+        }
+        else if( Number(firstNumber) !== Number(secondNumber)){
+            result.innerHTML+=`<h1>first number ${firstNumber} is not equal  ${secondNumber} number</h1>`
+        }
+
+
+    </script>
+</body>
+</html>
