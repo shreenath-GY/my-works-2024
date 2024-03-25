@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        form{
+            width: 300px;
+            background-color: rgb(188, 185, 185);
+            padding: 50px;
+            margin: 20px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+       input{
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        margin-top: 10px;
+       }
+       input[type="checkbox"]{
+        width: fit-content;
+       }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="name">Username</label><br>
+        <input type="text" id="name" name="username"><br>
+
+        <label for="name">email address</label><br>
+        <input type="email" name="email" id="email"><br>
+
+        <label for="name">password</label><br>
+        <input type="password" name="" id="password"><br>
+
+        <label for="">
+            <input type="checkbox" name="" id="showpassword" onchange=" passwordShow()">
+            <span id="showtext">Show password</span>
+        </label>
+    </form>
+
+
+    <script>
+        let password=document.getElementById("password");
+        let showpassword=document.getElementById("showpassword");
+        let showtext=document.getElementById("showtext");
+
+        function passwordShow(){
+            if(password.type=="password"){
+                 password.type='text';
+                 showtext.innerHTML="Hide Password";
+            }
+            else{
+                password.type='password';
+                showtext.innerHTML="Show Password";
+
+            }
+            
+        }
+    </script>
+</body>
+</html>
