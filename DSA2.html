@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>average of the given array</h1>
+    </center>
+
+    <script>
+        let array=[1,2,3,4,5];
+        let total=0;
+        console.log(array.length)
+         
+        function averageArray(array){
+            for(let i=0;i<array.length;i++){
+                 total=total+array[i];
+            }
+            console.log(total/array.length);
+            document.write(`total is${total}<br>`)
+            document.write(`average is${total/array.length}`)
+            // return total;
+            console.log(total);
+        }
+        averageArray(array);
+    </script>
+</body>
+</html>
