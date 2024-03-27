@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        video {
+            width: 100%;
+            min-height: 50vh;
+            object-fit: cover;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>play(), pause(),and fullscreen()</h1>
+    </center>
+    <video id="video"
+        src="https://v.ftcdn.net/07/52/98/27/700_F_752982709_3BhISKdgkKfZh6ahFhXH7G3nfADTivTd_ST.mp4"></video>
+
+    <div>
+        <button id="play" onclick="playVideo()">play</button>
+        <button id="pause" onclick="pauseHandler()">pause</button>
+        <button onclick="backwardVideo()">
+            << </button>
+                <button onclick="forwardVideo()">>> </button>
+                <button id="volume">Mute</button>
+                <span id="time"></span>
+                <input type="range" id="range" min="0">
+                <span id="d"></span>
+                <button onclick="fullScreeen()">FullScreen</button>
+    </div>
+    <script>
+        let video = document.getElementById('video');
+        let time = document.getElementById('time');
+        let duration = document.getElementById('d');
+        let range = document.getElementById('range');
+        let play=document.getElementById('play');
+        let isPlaying=true;
+
+
+
+        function setVideoTime() {
+            time.innerText = Math.round(video.currentTime);
+            range.setAttribute('value', Math.round(video.currentTime))
+        }
+        function setDuration() {
+            duration.innerText = Math.round(video.duration) + ":00s";
+            range.setAttribute('max', Math.round(video.duration))
+            // Get the current time and duration of the
+        }
+        setInterval('setDuration()', 100);
+
+        setInterval('setVideoTime()', 100);
+
+        function playHandler() {
+            video.play();
+        }
+        function fullScreeen() {
+            video.requestFullscreen();
+        }
+        function pauseHandler() {
+            video.pause();
+        }
+        function forwardVideo() {
+            video.currentTime += 5;
+        }
+        function backwardVideo() {
+            video.currentTime -= 5;
+        }
+        function playVideo() {
+            // if(isPlaying == true){
+            //     video.pause()
+            //     isPlaying = false;
+            // }
+            // else{
+            //     video.play();
+            //     isPlaying = true;
+            // }
+           isPlaying = !isPlaying;
+            if (isPlaying) {
+                video.pause()
+             play.innerText = 'play'
+            }
+            else {
+                video.play()
+                play.innerText = 'pause'
+            }
+
+        }
+
+        document.addEventListener("keydown", function (event) {
+            console.log(event.key);
+            event.preventDefault();
+            if (event.key === 32 || event.key === " ") {
+                video.pause();
+            }
+            if (event.key === 'M' || event.key === "m") {
+                video.muted = true;
+            }
+            if (event.key === 'U' || event.key === "u") {
+                video.muted = false;
+            }
+            if (event.key === 'P' || event.key === "p") {
+                video.play();
+            }
+            if (event.key === 'F' || event.key === "f") {
+                video.requestFullscreen();
+            }
+            if (event.key === 'Escape') {
+                video.exitFullscreen();
+            }
+            if (event.key === 'ArrowRight') {
+                video.currentTime += 2;
+            }
+            if (event.key === 'ArrowLeft') {
+                video.currentTime -= 2;
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>
