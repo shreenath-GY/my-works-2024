@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style></style>
+</head>
+
+<body>
+    <center>
+        <h1>form</h1>
+    </center>
+
+    <hr>
+    <div class="container">
+        <form id="form">
+            <h3>Create n new Account</h3>
+            <label for="">Username</label>
+            <input type="text" name="username" id="name" placeholder="confirm name">
+
+            <label for="">Email</label>
+            <input type="date" name="email" id="email" placeholder="confirm email">
+            <label for="">Phone number</label>
+            <input type="tel" name="phone" id="phone" placeholder="confirm name" maxlength="10">
+
+            <label for="">gender</label>
+            <select name="" id="gender">
+                <option value="male">male</option>
+                <option value="female">female</option>
+            </select>
+
+            <label for="">Is it good</label>
+            <label for="">
+                <input type="radio" name="action" id="action1">
+                yes
+            </label>
+            <label for="">
+                <input type="radio" name="action" id="action2">
+                no
+            </label>
+
+            <div class="btns">
+                <button type="submit">create</button>
+                <button type="reset">cancel</button>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        let name=document.querySelector('#name');
+        let phone=document.querySelector("#phone");
+        let email=document.querySelector("#email");
+        let gender=document.querySelector("#gender");
+        let action1=document.querySelector('#action1');
+        let action2=document.querySelector('#action2');
+        const submitHandler=(e)=>{
+            e.preventDefault();//to prevent page refresh or page reload
+
+            const user={
+                username:name.value,
+                emailAddress:email.value,
+                mobile:phone.value,
+                genderValue:gender.value,
+                action1:action1.checked,
+                action2:action2.checked,
+            }
+            console.log(user);
+        }
+
+        document.getElementById('from').addEventListener('submit', submitHandler)
+        document.getElementById('form').addEventListener('reset',()=>{
+            if(confirm('are you sure you want to reset?')){
+                alert('u clicked the ok')
+            }
+            else{
+                alert('you are cancelled')
+            }
+        })
+    </script>
+</body>
+
+</html>
