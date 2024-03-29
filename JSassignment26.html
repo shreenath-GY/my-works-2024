@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Chat</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #chat-container {
+            width: 300px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        #message-container {
+            height: 300px;
+            overflow-y: scroll;
+        }
+
+        .message {
+            background-color: #f2f2f2;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        #input-container {
+            margin-top: 10px;
+        }
+
+        #message-input {
+            width: 220px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #send-button {
+            padding: 8px 15px;
+            background-color: #3897f0;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #send-button:hover {
+            background-color: #1e70bf;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="chat-container">
+        <div id="message-container"></div>
+        <div id="input-container">
+            <input type="text" id="message-input" placeholder="Type your message...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const messageContainer = document.getElementById("message-container");
+            const messageInput = document.getElementById("message-input");
+            const sendButton = document.getElementById("send-button");
+
+            sendButton.addEventListener("click", function () {
+                const messageText = messageInput.value.trim();
+                if (messageText !== "") {
+                    appendMessage("You", messageText);
+                    messageInput.value = "";
+                }
+            });
+
+            function appendMessage(sender, message) {
+                const messageElement = document.createElement("div");
+                messageElement.classList.add("message");
+                messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
+                messageContainer.appendChild(messageElement);
+                messageContainer.scrollTop = messageContainer.scrollHeight;
+            }
+        });
+
+    </script>
+</body>
+
+</html>
