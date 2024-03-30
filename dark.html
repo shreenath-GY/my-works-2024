@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .darkmode{
+            background-color:black;
+            color: #fff;
+        }
+      
+        button{
+            padding: 15px;
+            background-color: teal;
+            border: none;
+            /* margin-left: 60px; */
+            cursor: pointer;
+            border-radius: 10px;
+            font-size: 1.4;
+        }
+        button:hover{
+            background-color: darkslategrey;
+            transition: 1s;
+            color: white;   
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div>
+            <h1>Welcome to my coding hub</h1>
+            <h3>
+               switch to Darkmode
+            </h3>
+            <button onclick="darkMode()">Darkmode</button>
+        </div>
+    </section>
+    <script>
+        function darkMode(){
+           document.body.classList.toggle('darkmode');
+        }
+    </script>
+</body>
+
+</html>
