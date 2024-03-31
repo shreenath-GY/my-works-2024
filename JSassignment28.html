@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            overflow: scroll;
+            background-color: blue;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>MouseLeave()< and onscroll</h1>
+    </center>
+
+    <p id="output"></p>
+    <button onclick="test()">click</button>
+    <div id="text" onscroll="wheelHandler()" >
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur labore quasi inventore tempore
+            necessitatibus hic beatae nihil debitis, natus, quae maxime. Necessitatibus ex excepturi culpa impedit nisi
+            fugit praesentium dolores?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto quis voluptatem harum quas cumque debitis
+            odio in sequi! Sunt, voluptates.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto quis voluptatem harum quas cumque debitis
+            odio in sequi! Sunt, voluptates.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto quis voluptatem harum quas cumque debitis
+            odio in sequi! Sunt, voluptates.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto quis voluptatem harum quas cumque debitis
+            odio in sequi! Sunt, voluptates.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto quis voluptatem harum quas cumque debitis
+            odio in sequi! Sunt, voluptates.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto quis voluptatem harum quas cumque debitis
+            odio in sequi! Sunt, voluptates.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto quis voluptatem harum quas cumque debitis
+            odio in sequi! Sunt, voluptates.</p>
+    </div>
+
+    <script>
+        let output = document.getElementById('output');
+        let element = document.getElementById('text');
+
+        function wheelHandler() {
+            output.innerHTML = element.scrollTop//here we are getting the value 
+        }
+        function test() {
+            element.scrollTop = "10";
+        }
+
+    </script>
+</body>
+
+</html>
