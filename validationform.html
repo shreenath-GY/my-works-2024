@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        select {
+            width: 100%;
+            outline: none;
+            border-bottom: 1px solid black;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            min-height: 100vh;
+            background-color: cadetblue;
+
+        }
+
+        .card1 {
+            width: 350px;
+            padding: 10px 15px;
+            background-color: #fff;
+            height: 480px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            box-shadow: -3px 3px 10px #4c4b4bc5;
+        }
+
+        .card2 {
+            width: 350px;
+            padding: 10px 15px;
+            background-color: rgb(48, 48, 121);
+            height: 480px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-shadow: 3px 3px 10px #4c4b4bc5;
+        }
+
+        .names1,
+        .names2,
+        .names3,
+        .names4 {
+            display: flex;
+            gap: 10px;
+        }
+
+        .names5 {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+
+       
+
+        #check {
+            width: 5%;
+        }
+
+        h3 {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: lightblue;
+        }
+        .card2 h3{
+          color: rgb(214, 210, 210);
+        }
+
+        input {
+            width: 100%;
+        }
+
+        .card1 input::placeholder {
+            color: rgb(120, 120, 120);
+        }
+
+        .card2 input::placeholder {
+            color: rgb(214, 210, 210);
+        }
+
+        .card2 button {
+            border-radius: 100px;
+            padding: 5px 15px;
+            outline: none;
+            border: none;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .child1,
+        .child2,
+        .child3,
+        .child4,
+        .child5 {
+            padding: 10px;
+            margin-bottom: 20px;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: rgb(120, 120, 120);
+            border-bottom: 1px solid rgb(157, 157, 157);
+        }
+
+        .child21,
+        .child22,
+        .child23,
+        .child24,
+        .child25,
+        .child26,
+        .child27,
+        .child28 {
+            padding: 10px;
+            margin-bottom: 20px;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: rgb(214, 210, 210);
+            border-bottom: 1px solid rgb(155, 155, 155);
+        }
+        p,a{
+            color: rgb(214, 210, 210);
+            font-size: 10px;
+        }
+        @media (max-width: 768px) {
+            .container{
+                /* flex-direction: column; */
+            }
+            .child1,
+        .child2,
+        .child3,
+        .child4,
+        .child5 {
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 10px;
+        }
+
+        .child21,
+        .child22,
+        .child23,
+        .child24,
+        .child25,
+        .child26,
+        .child27,
+        .child28 {
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 10px;
+        }
+        p,a{
+            font-size: 7px;
+        }
+        .card1,.card2{
+            height: 450px;
+
+        }
+        .card2 button {
+           font-size: 10px;
+        }
+        .card2 h3,h3 {
+           font-size: 15px;
+           margin-bottom: 15px;
+        }
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card1">
+            <h3>General Information</h3>
+            <select name="" id="title" class="child1">
+                <option value="" selected disabled>Title</option>
+                <option value="">Fresher</option>
+                <option value="">Expert</option>
+            </select>
+            <div class="names1" class="child2">
+                <input type="text" name="" id="fname" placeholder="First Name" class="child2 ">
+                <input type="text" name="" id="lname" placeholder="Last Name" class="child2 ">
+            </div>
+            <select name="" id="title" class="child3">
+                <option value="" selected disabled>Position</option>
+                <option value="">Intern</option>
+                <option value="">HR</option>
+                <option value="">Team lead</option>
+            </select>
+            <input type="text" placeholder="Company" class="child4">
+            <div class="names2" class="child5">
+                <input type="text" name="" id="fname" placeholder="Business Arena" class="child5">
+                <select name="" id="employee" class="child5">
+                    <option value="" selected disabled>Employees</option>
+                    <option value="">Fresher</option>
+                    <option value="">Expert</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="card2">
+            <h3>Contact Details</h3>
+            <input type="text" placeholder="Street + Nr" class="child21">
+            <input type="text" name="" id="" placeholder="Additional Information" class="child22">
+            <div class="names3" class="child23">
+                <input type="text" name="" id="fname" placeholder="Zip Code" class="child23">
+                <select name="" id="employee" class="child23">
+                    <option value="" selected disabled>Place</option>
+                    <option value="">Fresher</option>
+                    <option value="">Expert</option>
+                </select>
+            </div>
+            <select name="" id="country" class="child24">
+                <option value="" selected disabled>Country</option>
+                <option value="">India</option>
+                <option value="">US</option>
+                <option value="">Australia</option>
+                <option value="">Brazil</option>
+            </select>
+            <div class="names4" class="child25">
+                <input type="text" name="" id="fname" placeholder="Code +" class="child25">
+                <input type="text" name="" id="fname" placeholder="Phone Number" class="child25">
+            </div>
+            <input type="email" id="mail" placeholder="Your Email" class="child26">
+            <div class="names5" class="child27">
+                <input type="checkbox" name="" id="check">
+                <p>I do accept the <a href="">Terms and Conditions</a> of your site.</p>
+            </div>
+            <button type="submit">Register Badge</button>
+        </div>
+    </div>
+</body>
+
+</html>
