@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        form {
+            width: 300px;
+            background-color: rgb(188, 185, 185);
+            padding: 50px;
+            margin: 20px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        input {
+            width: 100%;
+            padding: 5px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            margin-top: 10px;
+        }
+
+        input[type="checkbox"] {
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" onfocusin="addFocus(event)" onfocusout="removeFocus(event)">
+        <label for="name">Username</label><br>
+        <input type="text" id="name" name="username"><br>
+        <p id="alerttext"></p>
+
+        <label for="name">email address</label><br>
+        <input type="email" name="email" id="email"><br>
+
+        <label for="name">password</label><br>
+        <input type="password" name="" id="password"><br>
+
+        <label for="">
+            <input type="checkbox" name="" id="showpassword">
+            <span id="showtext">Show password</span>
+        </label>
+    </form>
+
+
+    <script>
+        let alerttext = document.getElementById("alerttext");
+        function addFocus(event) {
+            console.log(event.target)
+            event.target.style.background = 'red';
+            if (event.target.type == "text") {
+                event.target.addEventListener('input', function () { // it is behave like oninput() event
+                    if (event.target.value.length < 6) {
+                        // alert("Password should be at least 6 letters");
+                        alerttext.innerHTML = "Password should be at least 6 letters";
+                        alerttext.style.color = "red"
+                    } else {
+                        // alert("Password is correct");
+                        alerttext.innerHTML = "Password is correct";
+                        alerttext.style.color = "green"
+                    }
+                })
+            }
+            event.target.style.padding = '10px';
+
+        }
+
+        function removeFocus(event) {
+            event.target.style.background = '';
+        }
+    </script>
+</body>
+
+</html>
