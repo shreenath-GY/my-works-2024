@@ -63,7 +63,7 @@
             gap: 2px;
         }
 
-       
+
 
         #check {
             width: 5%;
@@ -75,8 +75,9 @@
             font-weight: 600;
             color: lightblue;
         }
-        .card2 h3{
-          color: rgb(214, 210, 210);
+
+        .card2 h3 {
+            color: rgb(214, 210, 210);
         }
 
         input {
@@ -130,81 +131,98 @@
             color: rgb(214, 210, 210);
             border-bottom: 1px solid rgb(155, 155, 155);
         }
-        p,a{
+
+        p,
+        a {
             color: rgb(214, 210, 210);
             font-size: 10px;
         }
+
+        sup {
+            color: red;
+        }
+
+
+
         @media (max-width: 768px) {
-            .container{
+            .container {
                 /* flex-direction: column; */
             }
+
             .child1,
-        .child2,
-        .child3,
-        .child4,
-        .child5 {
-            padding: 10px;
-            margin-bottom: 20px;
-            font-size: 10px;
-        }
+            .child2,
+            .child3,
+            .child4,
+            .child5 {
+                padding: 10px;
+                margin-bottom: 20px;
+                font-size: 10px;
+            }
 
-        .child21,
-        .child22,
-        .child23,
-        .child24,
-        .child25,
-        .child26,
-        .child27,
-        .child28 {
-            padding: 10px;
-            margin-bottom: 20px;
-            font-size: 10px;
-        }
-        p,a{
-            font-size: 7px;
-        }
-        .card1,.card2{
-            height: 450px;
+            .child21,
+            .child22,
+            .child23,
+            .child24,
+            .child25,
+            .child26,
+            .child27,
+            .child28 {
+                padding: 10px;
+                margin-bottom: 20px;
+                font-size: 10px;
+            }
 
+            p,
+            a {
+                font-size: 7px;
+            }
+
+            .card1,
+            .card2 {
+                height: 450px;
+
+            }
+
+            .card2 button {
+                font-size: 10px;
+            }
+
+            .card2 h3,
+            h3 {
+                font-size: 15px;
+                margin-bottom: 15px;
+            }
         }
-        .card2 button {
-           font-size: 10px;
-        }
-        .card2 h3,h3 {
-           font-size: 15px;
-           margin-bottom: 15px;
-        }
-        }
-       
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <form class="container" onsubmit="titleHandler(event)">
         <div class="card1">
             <h3>General Information</h3>
             <select name="" id="title" class="child1">
                 <option value="" selected disabled>Title</option>
-                <option value="">Fresher</option>
-                <option value="">Expert</option>
+                <option value="Java">Java Developer</option>
+                <option value="Frontend">Frontend Developer</option>
             </select>
+            <span></span>
             <div class="names1" class="child2">
                 <input type="text" name="" id="fname" placeholder="First Name" class="child2 ">
                 <input type="text" name="" id="lname" placeholder="Last Name" class="child2 ">
             </div>
-            <select name="" id="title" class="child3">
+            <select name="" id="position" class="child3">
                 <option value="" selected disabled>Position</option>
-                <option value="">Intern</option>
-                <option value="">HR</option>
-                <option value="">Team lead</option>
+                <option value="Intern">Intern</option>
+                <option value="HR">HR</option>
+                <option value="Team lead">Team lead</option>
             </select>
-            <input type="text" placeholder="Company" class="child4">
+            <input type="text" placeholder="Company" id="company" class="child4">
             <div class="names2" class="child5">
-                <input type="text" name="" id="fname" placeholder="Business Arena" class="child5">
+                <input type="text" name="" id="bA" placeholder="Business Arena" class="child5">
                 <select name="" id="employee" class="child5">
                     <option value="" selected disabled>Employees</option>
-                    <option value="">Fresher</option>
-                    <option value="">Expert</option>
+                    <option value="Fresher">Fresher</option>
+                    <option value="Expert">Expert</option>
                 </select>
             </div>
         </div>
@@ -212,35 +230,182 @@
 
         <div class="card2">
             <h3>Contact Details</h3>
-            <input type="text" placeholder="Street + Nr" class="child21">
-            <input type="text" name="" id="" placeholder="Additional Information" class="child22">
+            <input type="text" placeholder="Street + Nr" id="street" class="child21">
+            <input type="text" name="" id="adninf" placeholder="Additional Information" class="child22">
             <div class="names3" class="child23">
-                <input type="text" name="" id="fname" placeholder="Zip Code" class="child23">
-                <select name="" id="employee" class="child23">
+                <input type="text" name="" id="zipcode" placeholder="Zip Code" class="child23">
+                <select name="" id="place" class="child23">
                     <option value="" selected disabled>Place</option>
-                    <option value="">Fresher</option>
-                    <option value="">Expert</option>
+                    <option value="Shivamogga">Shivamogga</option>
+                    <option value="Banglore">Banglore</option>
+                    <option value="otherdistct">other District</option>
                 </select>
             </div>
             <select name="" id="country" class="child24">
                 <option value="" selected disabled>Country</option>
-                <option value="">India</option>
-                <option value="">US</option>
-                <option value="">Australia</option>
-                <option value="">Brazil</option>
+                <option value="India">India</option>
+                <option value="US">US</option>
+                <option value="Australia">Australia</option>
+                <option value="Brazil">Brazil</option>
             </select>
             <div class="names4" class="child25">
-                <input type="text" name="" id="fname" placeholder="Code +" class="child25">
-                <input type="text" name="" id="fname" placeholder="Phone Number" class="child25">
+                <input type="text" name="" id="code" placeholder="Code +" class="child25">
+                <input type="text" name="" id="phnumber" placeholder="Phone Number" class="child25"
+                    oninput="phnumberHandler()">
             </div>
-            <input type="email" id="mail" placeholder="Your Email" class="child26">
+
+            <input type="email" id="mail" placeholder="Your Email" class="child26" oninput="emailHandler()">
             <div class="names5" class="child27">
-                <input type="checkbox" name="" id="check">
+                <input type="checkbox" name="" id="check" required>
                 <p>I do accept the <a href="">Terms and Conditions</a> of your site.</p>
             </div>
-            <button type="submit">Register Badge</button>
+            <button type="submit" onclick="loginUser()">Register Badge</button>
         </div>
-    </div>
+    </form>
+
+    <script>
+        let title = document.getElementById("title");
+        let position = document.getElementById("position");
+        let employee = document.getElementById("employee");
+        let place = document.getElementById("place");
+        let country = document.getElementById("country");
+        let fname = document.getElementById("fname");
+        let lname = document.getElementById("lname");
+        let company = document.getElementById("company");
+        let business = document.getElementById("bA");
+        let street = document.getElementById("street");
+        let adninf = document.getElementById("adninf");
+        let zipcode = document.getElementById("zipcode");
+        let code = document.getElementById("code");
+        let phnumber = document.getElementById("phnumber");
+        let mail = document.getElementById("mail");
+        // let phresult = document.getElementById("phresult");
+
+        function phnumberHandler() {
+            let regexp = /^[6-9]+\d{9}$/
+            console.log(regexp.test(phnumber.value))
+            if (phnumber.value == "" || regexp.test(phnumber.value) === false) {
+                phnumber.setAttribute("placeholder", "enter valid phone number")
+                phnumber.style.borderBottom = "1px solid red";
+            }
+            else {
+                phnumber.style.borderBottom = "1px solid green";
+            }
+        }
+        function emailHandler() {
+            let regexp = /^\S+\@\S+\.\S+$/;
+            console.log(regexp.test(mail.value))
+            if (mail.value == "" || regexp.test(mail.value) === false) {
+                mail.setAttribute("placeholder", "enter a valid email")
+                mail.style.borderBottom = "1px solid red";
+            }
+            else {
+                mail.style.borderBottom = "1px solid green";
+            }
+        }
+
+
+        function titleHandler(event) {
+            event.preventDefault()
+            if (title.value == "") {
+                title.style.borderBottom = "1px solid red";
+            }
+            else {
+                title.style.borderBottom = "1px solid green";
+            }
+            if (position.value == "") {
+                position.style.borderBottom = "1px solid red";
+            }
+            else {
+                position.style.borderBottom = "1px solid green";
+            }
+            if (employee.value == "") {
+                employee.style.borderBottom = "1px solid red";
+            }
+            else {
+                employee.style.borderBottom = "1px solid green";
+            }
+            if (place.value == "") {
+                place.style.borderBottom = "1px solid red";
+            }
+            else {
+                place.style.borderBottom = "1px solid green";
+            }
+            if (country.value == "") {
+                country.style.borderBottom = "1px solid red";
+            }
+            else {
+                country.style.borderBottom = "1px solid green";
+            }
+            if (fname.value == "") {
+                fname.style.borderBottom = "1px solid red";
+            }
+            else {
+                fname.style.borderBottom = "1px solid green";
+            }
+            if (lname.value == "") {
+                lname.style.borderBottom = "1px solid red";
+            }
+            else {
+                lname.style.borderBottom = "1px solid green";
+            }
+            if (company.value == "") {
+                company.style.borderBottom = "1px solid red";
+            }
+            else {
+                company.style.borderBottom = "1px solid green";
+            }
+            if (business.value == "") {
+                business.style.borderBottom = "1px solid red";
+            }
+            else {
+                business.style.borderBottom = "1px solid green";
+            }
+            if (code.value == "") {
+                code.style.borderBottom = "1px solid red";
+            }
+            else {
+                code.style.borderBottom = "1px solid green";
+            }
+            if (street.value == "") {
+                street.style.borderBottom = "1px solid red";
+            }
+            else {
+                street.style.borderBottom = "1px solid green";
+            }
+            // if (phnumber.value == "") {
+            //     phnumber.style.borderBottom = "1px solid red";
+            // }
+            // else {
+            //     phnumber.style.borderBottom = "1px solid green";
+            // }
+            if (zipcode.value == "") {
+                zipcode.style.borderBottom = "1px solid red";
+            }
+            else {
+                zipcode.style.borderBottom = "1px solid green";
+            }
+            if (adninf.value == "") {
+                adninf.style.borderBottom = "1px solid red";
+            }
+            else {
+                adninf.style.borderBottom = "1px solid green";
+            }
+        }
+
+        // function loginUser(){
+        //     if(title=="" || position==""|| employee==""|| business==""|| street==""|| adninf==""||company==""||country==""||phnumber==""||place==""||fname==""||lname==""||zipcode==""||code==""||mail==""){
+        //         alert("Please enter all values");
+        //     }
+        //     else{
+        //         alert("Please");
+        //     }
+
+        // }
+
+
+
+    </script>
 </body>
 
 </html>
