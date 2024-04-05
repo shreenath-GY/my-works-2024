@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Stories</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        .story-container {
+            position: relative;
+            max-width: 500px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .story {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slide {
+            width: 100%;
+            height: auto;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="story-container">
+        <div class="story">
+            <img src="image1.jpg" class="slide">
+            <img src="image1.jpg" class="slide">
+            <img src="image1.jpg" class="slide">
+            <!-- Add more images as needed -->
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+    <script>
+        let slideIndex = 0;
+
+        function changeSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            slideIndex += n;
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            } else if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            }
+            slides.forEach(slide => {
+                slide.style.transform = `translateX(-${slideIndex * 100}%)`;
+            });
+        }
+
+    </script>
+</body>
+
+</html>
