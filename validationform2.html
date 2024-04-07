@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: rgb(49, 93, 93);
+            padding: 10px;
+        }
+
+        .card1 {
+            width: 350px;
+            height: 400px;
+            background-color: rgb(43, 53, 77);
+            padding: 20px;
+            color: #dedede;
+            text-align: center;
+        }
+
+        .card1 h1,
+        p,
+        b,
+        h2 {
+            margin-bottom: 20px;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        .card1 p {
+            font-size: 14px;
+        }
+
+        .card1 img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            margin-top: 20px;
+        }
+
+        .card2 {
+            width: 350px;
+            height: 400px;
+            padding: 20px;
+            background-color: #fff;
+            color: #403f3f;
+            /* text-align: center; */
+        }
+        .card2 h1,p{
+            text-align: center;
+        }
+
+        .card2 p,
+        h1,
+        button,
+        .inputName {
+            margin-bottom: 20px;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        .card2 p {
+            font-size: 14px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 5px;
+            outline: none;
+            border: 1px solid #525050;
+            /* border: none; */
+        }
+
+        label {
+            float: left;
+            margin-top: 5px;
+            font-size: 13px;
+        }
+
+        .inputName {
+            display: flex;
+            gap: 10px
+        }
+
+        .card2 button {
+            width: 100%;
+            padding: 7px;
+            background-color: rgb(7, 132, 205);
+            border: none;
+            outline: none;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 20px;
+            /* color: #525050; */
+        }
+
+        @media (max-width:768px) {
+            .container {
+                flex-direction: column;
+                padding: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card1">
+            <h1>Analytics 101</h1>
+            <p>This free workshop shows you how to track <br> important metrics in your business</p>
+            <b>Your host</b><br>
+            <img src="https://img.freepik.com/free-photo/smiling-businessman-face-portrait-wearing-suit_53876-148138.jpg?t=st=1712082811~exp=1712086411~hmac=3c1c2205345a1db296f0c5925de976f30cda522c299cc8f42fffee4d118764e8&w=826"
+                alt="image">
+            <p>CEO,Company</p>
+            <h2>Jane Smith</h2>
+        </div>
+
+        <div class="card2">
+            <h1>Register Now</h1>
+            <p>Enter your information to register for the workshop.</p>
+            <h6 id="error" class="result"></h6>
+            <div class="inputName">
+                <input type="text" name="" id="fname" placeholder="First Name">
+                <input type="text" name="" id="lname" placeholder="Last Name">
+            </div>
+            <!-- <h6 id="error2" class="result2">hjsbmsnd</h6> -->
+
+            <input type="email" name="" id="mail" placeholder="Your mail" oninput="ValidateEmail()"><br>
+            <h6 id="error1" class="result1"></h6>
+            <label for="options">Select Day</label><br>
+            <select name="" id="day">
+                <option value="" selected disabled>Choose a day</option>
+                <option value="s">sunday</option>
+                <option value="m">Monday</option>
+                <option value="t">Tuesday</option>
+                <option value="w">Wednesday</option>
+                <option value="th">Thursday</option>
+                <option value="f">Friday</option>
+                <option value="s">Saturday</option>
+            </select><br>
+            <button onclick="validForm()">Register</button>
+        </div>
+    </div>
+
+    <script>
+        let mail=document.getElementById("mail");
+        let fname=document.getElementById("fname");
+        let lname=document.getElementById("lname");
+        let error=document.getElementById("error");
+        let error1=document.getElementById("error1");
+        let day=document.getElementById("day");
+        let regexp=/^[a-zA-Z0-9]+\@\S+\.com+$/;
+        let nameregexp=/^[a-zA-Z]$/;
+
+        function ValidateEmail() {
+            console.log(regexp.test(mail.value));
+            if(regexp.test(mail.value)===false){
+                error1.innerHTML = "Please enter valid email";
+                error1.style.color = "red";
+                mail.style.border="1px solid red"
+                error.style.fontStyle="italic";
+            }
+            else{
+                mail.style.border="1px solid #525050"
+                error1.innerHTML = "";
+            }
+        }
+        function validForm(){
+           if(fname.value==""||lname.value==""||mail.value==""||day.value==""){
+              error.innerHTML="Please enter all values."
+              error.style.color="red";
+              error.style.fontStyle="italic";
+
+
+           }
+           else{
+            // error.innerHTML="";
+            // alert("successfully registered");
+            swal("Success", "You successfully registered", "success");
+
+           }
+        }
+    </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>
